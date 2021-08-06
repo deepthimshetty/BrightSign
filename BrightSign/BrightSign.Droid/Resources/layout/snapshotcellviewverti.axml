@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvvm="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<!--<Mvx.MvxImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        mvvm:MvxBind="ImageUrl ImageUrl" />-->
+    <MvxImageView
+        android:id="@+id/imgRotate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY" />
+<!--<ImageView
+        android:id="@+id/imgRotate1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scaleType="centerInside" />-->
+<!--<ImageView
+        android:id="@+id/imgRotate"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_gravity="center_vertical"
+        android:src="@android:drawable/sym_call_missed" />-->
+</LinearLayout>

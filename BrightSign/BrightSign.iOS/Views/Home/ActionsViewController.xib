@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionsViewController" customModule="BrightSign_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="QDL-Wa-HYj" id="LaB-rw-yM5"/>
+                <outlet property="deviceInfoView" destination="ano-gb-9dg" id="Gs8-fx-es4"/>
+                <outlet property="segmentedControl" destination="XLR-oT-yYi" id="PN7-AC-A2Y"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ano-gb-9dg" customClass="DeviceInfo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="Uag-uL-6j7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6g-Jn-PHg">
+                    <rect key="frame" x="0.0" y="166" width="375" height="501"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QDL-Wa-HYj">
+                            <rect key="frame" x="5" y="5" width="365" height="446"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="BF6-3o-Umt">
+                                <size key="itemSize" width="150" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="TTi-XR-gPP"/>
+                                <outlet property="delegate" destination="-1" id="uBF-wu-qbG"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QDL-Wa-HYj" secondAttribute="trailing" constant="5" id="Pcl-xM-2CQ"/>
+                        <constraint firstItem="QDL-Wa-HYj" firstAttribute="top" secondItem="H6g-Jn-PHg" secondAttribute="top" constant="5" id="gGS-tL-sCu"/>
+                        <constraint firstAttribute="bottom" secondItem="QDL-Wa-HYj" secondAttribute="bottom" constant="50" id="jBu-jR-ydG"/>
+                        <constraint firstItem="QDL-Wa-HYj" firstAttribute="leading" secondItem="H6g-Jn-PHg" secondAttribute="leading" constant="5" id="z7O-L2-RKx"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XLR-oT-yYi">
+                    <rect key="frame" x="10" y="128" width="355" height="29"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <segments>
+                        <segment title="Default"/>
+                        <segment title="User Defined"/>
+                    </segments>
+                    <color key="tintColor" red="0.18431372549019609" green="0.050980392156862744" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="H6g-Jn-PHg" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="2FI-3Y-WSj"/>
+                <constraint firstAttribute="trailing" secondItem="ano-gb-9dg" secondAttribute="trailing" id="Ar4-Aa-OcL"/>
+                <constraint firstItem="ano-gb-9dg" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="KUV-9Z-gz0"/>
+                <constraint firstItem="XLR-oT-yYi" firstAttribute="top" secondItem="ano-gb-9dg" secondAttribute="bottom" constant="8" id="SMm-5h-l0b"/>
+                <constraint firstAttribute="bottom" secondItem="H6g-Jn-PHg" secondAttribute="bottom" id="WtG-LR-aic"/>
+                <constraint firstAttribute="trailing" secondItem="XLR-oT-yYi" secondAttribute="trailing" constant="10" id="avx-gd-FxF"/>
+                <constraint firstAttribute="trailing" secondItem="H6g-Jn-PHg" secondAttribute="trailing" id="gRl-xA-D18"/>
+                <constraint firstItem="H6g-Jn-PHg" firstAttribute="top" secondItem="XLR-oT-yYi" secondAttribute="bottom" constant="10" id="oX8-bZ-jc2"/>
+                <constraint firstItem="ano-gb-9dg" firstAttribute="top" secondItem="2" secondAttribute="top" id="w0O-SV-77M"/>
+                <constraint firstItem="XLR-oT-yYi" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="xEL-Gi-FTU"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

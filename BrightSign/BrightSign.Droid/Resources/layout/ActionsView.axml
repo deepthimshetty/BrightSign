@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvvm="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF3">
+    <include
+        layout="@layout/variables_top_view"
+        android:id="@+id/actions_top_view" />
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:layout_height="30dp"
+                    android:paddingLeft="40dp"
+                    android:id="@+id/defaultBtn"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:background="@null"
+                    android:text="Default" />
+                <View
+                    android:layout_width="130dp"
+                    android:layout_height="2dp"
+                    android:id="@+id/defaultView"
+                    android:background="@android:color/holo_orange_dark" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+                <Button
+                    android:layout_height="30dp"
+                    android:id="@+id/userDefinedBtn"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:background="@null"
+                    android:text="User Defined" />
+                <View
+                    android:layout_width="130dp"
+                    android:id="@+id/userDefinedView"
+                    android:layout_height="2dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <MvvmCross.Binding.Droid.Views.MvxGridView
+        android:id="@+id/gvActions"
+        android:layout_width="match_parent"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_height="fill_parent"
+        mvvm:MvxBind="ItemsSource ActionsItemSource; ItemClick UDPCommand"
+        mvvm:MvxItemTemplate="@layout/actionbuttonview_new" />
+</LinearLayout>

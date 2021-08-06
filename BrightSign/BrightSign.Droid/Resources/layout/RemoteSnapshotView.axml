@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvvm="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#FAFAFB"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:background="#FAFAFB"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#FAFAFB"
+            android:layout_height="match_parent">
+            <include
+                layout="@layout/variables_top_view"
+                android:id="@+id/remote_top_view" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/refreshLayout"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/shadow">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Remote Snapshots"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+                <Switch
+                    android:id="@+id/refreshSwitch"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    mvvm:MvxBind="Checked snapshotconfig.Enabled"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FAFAFB"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="SNAPSHOT FREQUENCY(MINUTES)"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_left" />
+        <!--First Slider!-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:background="@drawable/shadow"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="0"
+                        android:id="@+id/minFrequency"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/margin_right" />
+                    <SeekBar
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sbarFrequency"
+                        mvvm:MvxBind="Progress snapshotconfig.Interval"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginRight="@dimen/margin_right" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        mvvm:MvxBind="Text snapshotconfig.Interval"
+                        android:paddingRight="5dp"
+                        android:id="@+id/maxFrequency"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            <!--<View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey" />-->
+            </RelativeLayout>
+        <!--Second Slider Heading!-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NUMBER OF SNAPSHOTS TO SAVE"
+                android:paddingTop="10dp"
+                android:background="#FAFAFB"
+                android:paddingBottom="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_left" />
+        <!--Second Slider!-->
+            <RelativeLayout
+                android:background="@drawable/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="0"
+                        android:id="@+id/minSnapshot"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/margin_right" />
+                    <SeekBar
+                        android:max="100"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sbarNoOfSnaps"
+                        mvvm:MvxBind="Progress snapshotconfig.MaxImages"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginRight="@dimen/margin_right" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        mvvm:MvxBind="Text snapshotconfig.MaxImages"
+                        android:paddingRight="5dp"
+                        android:id="@+id/maxSnapshot"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        <!--<View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="#FAFAFB"
+                android:text="JPEG QUALITY LEVEL"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_left" />
+        <!--Third Slider Heading!-->
+        <!--Third Slider!-->
+            <RelativeLayout
+                android:background="@drawable/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="0"
+                        android:id="@+id/minJpeglevel"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/margin_right" />
+                    <SeekBar
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sbarJpg"
+                        mvvm:MvxBind="Progress snapshotconfig.Quality"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginRight="@dimen/margin_right" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        mvvm:MvxBind="Text snapshotconfig.Quality"
+                        android:paddingRight="5dp"
+                        android:id="@+id/maxJpeglevel"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            <!--<View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey" />-->
+            </RelativeLayout>
+        <!--Last Switch !-->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_top_section"
+                android:background="@drawable/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Portrait Mode Display"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/margin_left" />
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchpotrait"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        mvvm:MvxBind="Checked snapshotconfig.DisplayPortraitMode" />
+                </RelativeLayout>
+            <!-- <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey" />-->
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

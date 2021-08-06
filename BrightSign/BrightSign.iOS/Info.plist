@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>BrightSign</string>
+	<key>CFBundleIdentifier</key>
+	<string>biz.BrightSign.BrightSign</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.1.86</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIconCorrect.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This Application requires access to Photos</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This Application requires access to Photos</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This Application uses your Calender</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>beta-reports-active</key>
+	<true/>
+	<key>CFBundleVersion</key>
+	<string>86</string>
+	<key>MinimumOSVersion</key>
+	<string>10.0</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This Permission is required to upload the Camera Picture to the Diagnostics Page</string>
+	<key>Custom Property</key>
+	<string>Light</string>
+	<key>CFBundleDisplayName</key>
+	<string>BrightSign</string>
+</dict>
+</plist>

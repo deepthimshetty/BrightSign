@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<linker>
+    <assembly fullname="System.Net.Http">
+        <type fullname="System.Net.Http.HttpClientHandler*" />
+        <type fullname="System.Net.Http.MonoWebRequestHandler*" />
+    </assembly>
+</linker>

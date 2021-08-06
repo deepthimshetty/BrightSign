@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--<BrightSign.Droid.ScaleImageView
+        android:id="@+id/imgSnapshot"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />-->
+    <com.github.chrisbanes.photoview.PhotoView
+        android:scaleType="center"
+        android:id="@+id/imgSnapshot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!--<uk.co.senab.photoview.PhotoView
+        android:id="@+id/imgSnapshot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/section_height"
+        android:orientation="horizontal"
+        android:background="@color/view_background_color"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:id="@+id/btnRotateRight"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/btnRotateLeft"
+            android:layout_toStartOf="@id/btnRotateRight"
+            android:src="@drawable/ic_refresh"
+            android:scaleX="-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>-->
+</LinearLayout>

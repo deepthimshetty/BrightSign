@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C61EA3C-F4CD-4DEE-BF82-1DE8707BE52E}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BrightSign.Droid</RootNamespace>
+    <AssemblyName>BrightSign.Droid</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <JavaMaximumHeapSize></JavaMaximumHeapSize>
+    <AndroidSupportedAbis>armeabi-v7a;armeabi;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis />
+    <JavaMaximumHeapSize />
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidTlsProvider>legacy</AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>../Certificates/BrightSign/BrightSign.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>BrightSign</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>BrightSign</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>BrightSign</AndroidSigningKeyPass>
+    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidTlsProvider>btls</AndroidTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+    <PackageReference Include="MvvmCross">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Binding">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Core">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Platform">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="Zeroconf">
+      <Version>3.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Messenger">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.DeviceInfo">
+      <Version>3.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="rda.SocketsForPCL">
+      <Version>2.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.DownloadCache">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.File">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="Square.Picasso">
+      <Version>2.5.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>6.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Email">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.PhotoView">
+      <Version>2.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.3.6</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
+      <Version>5.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Annotations">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.UI">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Transition">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="PCLStorage">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Permissions">
+      <Version>3.0.0.12</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.6.292</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>2.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>2.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="NtlmHttpHandler">
+      <Version>1.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    
+    
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroidN">
+      <HintPath>..\..\packages\SQLite.Net.Platform.XamarinAndroidN.3.1.1\lib\SQLite.Net.Platform.XamarinAndroidN.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="BrightSign.Core">
+      <HintPath>..\BrightSign.Core\bin\Debug\netstandard1.4\BrightSign.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrightSign.Core\BrightSign.Core.csproj">
+      <Project>{B20B630A-57F4-4450-9D5B-4923E55ED5AC}</Project>
+      <Name>BrightSign.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrightSign.Localization\BrightSign.Localization.csproj">
+      <Project>{7A0926D2-0A04-44E1-8518-3051C0AB33B0}</Project>
+      <Name>BrightSign.Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Utility\Interface\" />
+    <Folder Include="Views\Fragments\AddDevice\" />
+    <Folder Include="Views\BaseClasses\" />
+    <Folder Include="Views\Fragments\Snapshot\" />
+    <Folder Include="Views\Fragments\SearchUnits\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Utility\Converters\" />
+    <Folder Include="Views\Fragments\Manage Actions\" />
+    <Folder Include="Resources\mipmap-ldpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\layout\toolbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\arrays.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\integers.xml" />
+    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+    <AndroidResource Include="Resources\values\strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\layout\MainView.axml" />
+    <AndroidResource Include="Resources\menu\bottom_navigation_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\VariablesView.axml" />
+    <AndroidResource Include="Resources\layout\ActionsView.axml" />
+    <AndroidResource Include="Resources\layout\DiagnosticsView.axml" />
+    <AndroidResource Include="Resources\drawable\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_perm_camera_mic_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_autorenew_black_24dp.png" />
+    <AndroidResource Include="Resources\layout\SettingsView.axml" />
+    <AndroidResource Include="Resources\layout\AddDeviceView.axml" />
+    <AndroidResource Include="Resources\layout\SwitchLabelView.axml" />
+    <AndroidResource Include="Resources\layout\TwoLableView.axml" />
+    <AndroidResource Include="Resources\layout\LabelView.axml" />
+    <AndroidResource Include="Resources\layout\NavigationCell.axml" />
+    <AndroidResource Include="Resources\layout\LabelWithTopMargin.axml" />
+    <AndroidResource Include="Resources\layout\LabelWithRadioGroup.axml" />
+    <AndroidResource Include="Resources\layout\ImageLabelButton.axml" />
+    <AndroidResource Include="Resources\layout\AddActionView.axml" />
+    <AndroidResource Include="Resources\layout\ActionItemView.axml" />
+    <AndroidResource Include="Resources\layout\BSUnitsView.axml" />
+    <AndroidResource Include="Resources\layout\bsunitcell.axml" />
+    <AndroidResource Include="Resources\layout\BSUnitViewItemTemplate.axml" />
+    <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
+    <AndroidResource Include="Resources\layout\HomeView.axml" />
+    <AndroidResource Include="Resources\layout\CustomTabLayout.axml" />
+    <AndroidResource Include="Resources\layout\actionbuttonview.axml" />
+    <AndroidResource Include="Resources\layout\ManageBSUnitsView.axml" />
+    <AndroidResource Include="Resources\layout\item_radio.axml" />
+    <AndroidResource Include="Resources\layout\RemoteSnapshotView.axml" />
+    <AndroidResource Include="Resources\layout\SnapshotsView.axml" />
+    <AndroidResource Include="Resources\layout\snapshotcellview.axml" />
+    <AndroidResource Include="Resources\layout\SnapshotDetailView.axml" />
+    <AndroidResource Include="Resources\layout\SearchUnitsLayout.axml" />
+    <AndroidResource Include="Resources\drawable\searchunits.png" />
+    <AndroidResource Include="Resources\layout\active_view.axml" />
+    <AndroidResource Include="Resources\layout\active_view_row.axml" />
+    <AndroidResource Include="Resources\drawable\check.png" />
+    <AndroidResource Include="Resources\drawable\refresh.png" />
+    <AndroidResource Include="Resources\layout\units_layout.axml" />
+    <AndroidResource Include="Resources\drawable\bottom_navigation_color_selector.xml" />
+    <AndroidResource Include="Resources\drawable\gradient_background.xml" />
+    <AndroidResource Include="Resources\layout\offline_view.axml" />
+    <AndroidResource Include="Resources\layout\topbar_layout.axml" />
+    <AndroidResource Include="Resources\drawable\round_corner_view.xml" />
+    <AndroidResource Include="Resources\drawable\radio_style.xml" />
+    <AndroidResource Include="Resources\layout\variables_top_view.axml" />
+    <AndroidResource Include="Resources\layout\variables_new_view.axml" />
+    <AndroidResource Include="Resources\drawable\shape.axml" />
+    <AndroidResource Include="Resources\drawable\arrow.png" />
+    <AndroidResource Include="Resources\drawable\shadow.axml" />
+    <AndroidResource Include="Resources\drawable\close.png" />
+    <AndroidResource Include="Resources\drawable\search_units_shape.axml" />
+    <AndroidResource Include="Resources\layout\popup.axml" />
+    <AndroidResource Include="Resources\drawable\success_icon.png" />
+    <AndroidResource Include="Resources\drawable\gallery.png" />
+    <AndroidResource Include="Resources\drawable\actions.png" />
+    <AndroidResource Include="Resources\drawable\diagnostics.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\variables.png" />
+    <AndroidResource Include="Resources\drawable\action_selected.png" />
+    <AndroidResource Include="Resources\drawable\action.png" />
+
+    <AndroidResource Include="Resources\drawable-hdpi\i4k242_fancy.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\i4k1042_fancy.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\i4k1142_fancy.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\i120.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd220.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd222.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd223.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd1020.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd1022.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd1023.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ls423.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ops.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd230.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd232.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd233.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd1030.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd1032_1132.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd1033.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xd1230_skewed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xt243.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xt1143.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\i4k242_fancy.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\i4k1042_fancy.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\i4k1142_fancy.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\i120.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hd220.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hd222.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hd223.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hd1020.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hd1022.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hd1023.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ls423.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ops.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd230.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd232.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd233.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd1030.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd1032_1132.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd1033.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xd1230_skewed.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xt243.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xt1143.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\i4k242_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\i4k1042_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\i4k1142_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\i120.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hd220.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hd222.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hd223.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hd1020.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hd1022.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hd1023.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ls423.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ops.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd230.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd232.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd233.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd1030.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd1032_1132.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd1033.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xd1230_skewed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xt243.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xt1143.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\i4k242_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\i4k1042_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\i4k1142_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\i120.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd220.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd222.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd223.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd1020.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd1022.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd1023.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ls423.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ops.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd230.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd232.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd233.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd1030.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd1032_1132.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd1033.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xd1230_skewed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xt243.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xt1143.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\i4k242_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\i4k1042_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\i4k1142_fancy.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\i120.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd220.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd222.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd223.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd1020.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd1022.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd1023.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ls423.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ops.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd230.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd232.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd233.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd1030.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd1032_1132.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd1033.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xd1230_skewed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xt243.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xt1143.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bsbi.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bsbi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bsbi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bsbi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bsbi.png" />
+    <AndroidResource Include="Resources\drawable\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\layout\manage_actions.axml" />
+    <AndroidResource Include="Resources\layout\action_item.axml" />
+    <AndroidResource Include="Resources\drawable\round_corner_popup.xml" />
+    <AndroidResource Include="Resources\drawable\round_corner_border.xml" />
+    <AndroidResource Include="Resources\drawable\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_chevron_left_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_refresh_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_chevron_left_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_refresh_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_chevron_left_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_refresh_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_chevron_left_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_refresh_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_chevron_left_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_refresh_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chevron_left_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_refresh_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\actions.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\diagnostics.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gallery.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\refresh.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\variables.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\refresh.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\refresh.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\refresh.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\refresh.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\actions.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\diagnostics.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gallery.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\variables.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\actions.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\diagnostics.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gallery.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\variables.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\actions.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\diagnostics.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gallery.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\variables.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\actions.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\diagnostics.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\gallery.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\variables.png" />
+    <AndroidResource Include="Resources\drawable\ic_share_white_24dp.png" />
+    <AndroidResource Include="Resources\layout\AuthorizationPopup.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ho523.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ls_front.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\roadster.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ho523.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ls_front.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\roadster.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ho523.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ls_front.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\roadster.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ho523.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ls_front.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\roadster.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ho523.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ls_front.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\roadster.png" />
+    <AndroidResource Include="Resources\layout\actionbuttonview_new.axml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\app_icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\app_icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_rotate_right_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\baseline_rotate_right_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_rotate_right_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_rotate_right_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_rotate_right_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_rotate_left_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\baseline_rotate_left_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_rotate_left_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_rotate_left_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_rotate_left_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_share_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\baseline_share_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_share_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_share_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_share_white.png" />
+    <AndroidResource Include="Resources\layout\snapshotcellviewverti.axml" />
+    <AndroidResource Include="Resources\drawable\GetSnapshot.png" />
+    <AndroidResource Include="Resources\mipmap-ldpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_reorder.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_reorder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_reorder.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_reorder.png" />
+    <AndroidResource Include="Resources\drawable\selector.xml" />
+    <AndroidResource Include="Resources\drawable\selectedshadow.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\hd1024.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ls424.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\hd1024.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\ls424.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\hd1024.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ls424.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\hd1024.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ls424.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hd1024.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ls424.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\layout\CustomActionBar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Views\MainActivity.cs" />
+    <Compile Include="Views\Fragments\ActionsFragment.cs" />
+    <Compile Include="Views\Fragments\DiagnosticsFragment.cs" />
+    <Compile Include="Utility\Interface\DialogService.cs" />
+    <Compile Include="Views\Fragments\SettingsFragment.cs" />
+    <Compile Include="Views\Fragments\AddDevice\AddDeviceFragment.cs" />
+    <Compile Include="Views\Fragments\HomeFragment.cs" />
+    <Compile Include="Views\BaseClasses\MvxViewPagerFragmentAdapter.cs" />
+    <Compile Include="Utility\Interface\AndroidUserPreferences.cs" />
+    <Compile Include="Views\Fragments\Snapshot\RemoteSnapshotFragment.cs" />
+    <Compile Include="Views\Fragments\Snapshot\SnapshotsFragment.cs" />
+    <Compile Include="Utility\Interface\DBHelper.cs" />
+    <Compile Include="Utility\Interface\SQLiteAndroid.cs" />
+    <Compile Include="Views\Fragments\Snapshot\SnapshotDetailFragment.cs" />
+    <Compile Include="Views\Fragments\SearchUnits\SearchUnitsActivity.cs" />
+    <Compile Include="Utility\ScaleImageView.cs" />
+    <Compile Include="Views\Fragments\ActiveFragment.cs" />
+    <Compile Include="Views\Fragments\OfflineFragment.cs" />
+
+    <Compile Include="Views\Fragments\UnitsFragment.cs" />
+    <Compile Include="Utility\Interface\CustomViewPager.cs" />
+    <Compile Include="Utility\Interface\CustomAlert.cs" />
+    <Compile Include="Utility\Utility.cs" />
+
+    <Compile Include="Views\Fragments\Manage Actions\ManageActionsFragment.cs" />
+
+    <Compile Include="Views\Fragments\Snapshot\SnapshotPagerFragment.cs" />
+
+    <Compile Include="Views\Fragments\VariablesFragment.cs" />
+    <Compile Include="Utility\Interface\FileManager.cs" />
+    <Compile Include="Utility\ImageHolder.cs" />
+    <Compile Include="Utility\Interface\ItemTouchHelperAdapter.cs" />
+    <Compile Include="Views\Fragments\Manage Actions\SimpleItemTouchHelperCallback.cs" />
+    <Compile Include="Views\Fragments\Manage Actions\BaseRecycleViewAdapter.cs" />
+    <Compile Include="Views\Fragments\Manage Actions\RecyclerClickEventArgs.cs" />
+    <Compile Include="Views\Fragments\Manage Actions\OnStartDragListener.cs" />
+    <Compile Include="Utility\Interface\StoragePathHelper.cs" />
+    <Compile Include="MainApplication.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <LinkDescription Include="LinkerNew.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Target Name="BeforeBuild" Condition=" $(SetVersion) == true ">
+        <!-- <GetAssemblyIdentity AssemblyFiles="$(AssemblyPath)">
+            <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+        </GetAssemblyIdentity>
+        <PropertyGroup>
+            <VersionNumber>$([System.Text.RegularExpressions.Regex]::Match(%(AssemblyInfo.Version), `[^.][^.]*.[^.]*.[^.]*`))</VersionNumber>
+        </PropertyGroup> -->
+        <XmlPoke XmlInputPath="Properties\AndroidManifest.xml" Namespaces="&lt;Namespace Prefix='android' Uri='http://schemas.android.com/apk/res/android' /&gt;" Query="manifest/@android:versionCode" Value="$(BuildNumber)" />
+        <XmlPoke XmlInputPath="Properties\AndroidManifest.xml" Namespaces="&lt;Namespace Prefix='android' Uri='http://schemas.android.com/apk/res/android' /&gt;" Query="manifest/@android:versionName" Value="$(VersionNumber)" />
+  </Target>
+</Project>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTIVE BRIGHTSIGN UNITS"
+        android:layout_marginTop="@dimen/margin_top_section"
+        android:layout_marginLeft="@dimen/margin_left" />
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="@color/grey" />
+    <MvvmCross.Binding.Droid.Views.MvxListView
+        android:id="@+id/bsunitViewList"
+        android:scrollbars="vertical"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:background="#f9fafc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        local:MvxBind="ItemsSource BSUnitsItemSource; ItemClick ListSelectorCommand"
+        local:MvxItemTemplate="@layout/bsunitcell" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_top_section"
+        android:background="@color/white"
+        local:MvxBind="Click ManageBSUnitsCommand"
+        android:layout_height="@dimen/section_height">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:text="Manage Active BrightSigns"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:src="@drawable/abc_ic_arrow_drop_right_black_24dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true" />
+        <ImageView
+            android:id="@+id/imageInfo"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_toStartOf="@id/imgArrow" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add or remove BrightSign units from the Active Unit list"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginLeft="@dimen/margin_left" />
+</LinearLayout>

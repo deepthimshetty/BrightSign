@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnitsViewController">
+            <connections>
+                <outlet property="activeTab" destination="Egd-df-1Lz" id="dex-lj-lVK"/>
+                <outlet property="addDeviceButton" destination="y4g-8q-nnH" id="LLh-ZX-Mvt"/>
+                <outlet property="devicesTableView" destination="YVA-4l-4VN" id="brb-Tx-H2w"/>
+                <outlet property="gradientView" destination="8V3-iX-Xyc" id="z3h-po-IYT"/>
+                <outlet property="offlineTab" destination="OXc-Dl-zQc" id="2v0-sA-rDl"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8V3-iX-Xyc" customClass="GradientView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-df-1Lz" customClass="TabView">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="T5F-UM-l3U"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-Dl-zQc" customClass="TabView">
+                            <rect key="frame" x="100" y="0.0" width="100" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Egd-df-1Lz" firstAttribute="leading" secondItem="8V3-iX-Xyc" secondAttribute="leading" id="7KF-Bx-gqR"/>
+                        <constraint firstAttribute="height" constant="50" id="Fp4-P1-hd4"/>
+                        <constraint firstItem="OXc-Dl-zQc" firstAttribute="leading" secondItem="Egd-df-1Lz" secondAttribute="trailing" id="Inj-3y-LPb"/>
+                        <constraint firstAttribute="bottom" secondItem="Egd-df-1Lz" secondAttribute="bottom" id="Rwm-S5-KPI"/>
+                        <constraint firstItem="OXc-Dl-zQc" firstAttribute="width" secondItem="Egd-df-1Lz" secondAttribute="width" id="fuR-nx-Sf2"/>
+                        <constraint firstItem="Egd-df-1Lz" firstAttribute="top" secondItem="8V3-iX-Xyc" secondAttribute="top" id="mjA-wP-kpV"/>
+                        <constraint firstItem="OXc-Dl-zQc" firstAttribute="top" secondItem="8V3-iX-Xyc" secondAttribute="top" id="qRj-Ll-MKh"/>
+                        <constraint firstAttribute="bottom" secondItem="OXc-Dl-zQc" secondAttribute="bottom" id="rg8-02-4oR"/>
+                        <constraint firstItem="OXc-Dl-zQc" firstAttribute="leading" secondItem="Egd-df-1Lz" secondAttribute="trailing" id="wfu-mX-fCQ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YVA-4l-4VN">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4g-8q-nnH" customClass="RoundedButton">
+                    <rect key="frame" x="295" y="587" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.47843137254901957" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="R1J-AE-dEd"/>
+                        <constraint firstAttribute="width" constant="50" id="umE-Fp-m9Q"/>
+                    </constraints>
+                    <state key="normal" image="ic_add_white.png"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YVA-4l-4VN" secondAttribute="bottom" id="Esw-H8-3XE"/>
+                <constraint firstItem="YVA-4l-4VN" firstAttribute="top" secondItem="8V3-iX-Xyc" secondAttribute="bottom" constant="10" id="Mss-Pk-SGm"/>
+                <constraint firstAttribute="trailing" secondItem="YVA-4l-4VN" secondAttribute="trailing" id="VKV-t0-hdA"/>
+                <constraint firstAttribute="trailing" secondItem="8V3-iX-Xyc" secondAttribute="trailing" id="Wqe-iy-BQ2"/>
+                <constraint firstItem="YVA-4l-4VN" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Wse-22-ry4"/>
+                <constraint firstAttribute="bottom" secondItem="y4g-8q-nnH" secondAttribute="bottom" constant="30" id="aNn-zd-hZZ"/>
+                <constraint firstItem="8V3-iX-Xyc" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="e7z-Q0-wl9"/>
+                <constraint firstItem="8V3-iX-Xyc" firstAttribute="top" secondItem="2" secondAttribute="top" id="yKY-YU-mjI"/>
+                <constraint firstAttribute="trailing" secondItem="y4g-8q-nnH" secondAttribute="trailing" constant="30" id="yos-Se-8OV"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_add_white.png" width="24" height="24"/>
+    </resources>
+</document>

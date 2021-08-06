@@ -1,0 +1,211 @@
+{
+  "version": 2,
+  "dgSpecHash": "IEqT48cdGyYvQTEJTAmNmPdaOLYfVAYIT8qEwsUEH37e92Oh/qq2my7vOo1R0szMmVveob7DlZK+mysyI9yYzA==",
+  "success": true,
+  "projectFilePath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/ndevalapally/.nuget/packages/acr.userdialogs/6.5.1/acr.userdialogs.6.5.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.appcenter/2.6.1/microsoft.appcenter.2.6.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.appcenter.analytics/2.6.1/microsoft.appcenter.analytics.2.6.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.appcenter.crashes/2.6.1/microsoft.appcenter.crashes.2.6.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.bcl/1.1.6/microsoft.bcl.1.1.6.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.bcl.async/1.0.165/microsoft.bcl.async.1.0.165.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.bcl.build/1.0.10/microsoft.bcl.build.1.0.10.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross/5.6.3/mvvmcross.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross.binding/5.6.3/mvvmcross.binding.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross.core/5.6.3/mvvmcross.core.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross.platform/5.6.3/mvvmcross.platform.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross.plugin.email/5.6.3/mvvmcross.plugin.email.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross.plugin.file/5.6.3/mvvmcross.plugin.file.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/mvvmcross.plugin.messenger/5.6.3/mvvmcross.plugin.messenger.5.6.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/newtonsoft.json/11.0.1/newtonsoft.json.11.0.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/ntlmhttphandler/1.0.2/ntlmhttphandler.1.0.2.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/pclstorage/1.0.2/pclstorage.1.0.2.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/rda.socketsforpcl/2.0.2/rda.socketsforpcl.2.0.2.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.native.system.io.compression/4.3.0/runtime.native.system.io.compression.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.native.system.net.http/4.3.0/runtime.native.system.net.http.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.native.system.security.cryptography.apple/4.3.0/runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.native.system.security.cryptography.openssl/4.3.0/runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0/runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/splat/2.0.0/splat.2.0.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/sqlite-net-pcl/1.6.292/sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/sqlitepclraw.bundle_green/1.1.13/sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/sqlitepclraw.core/1.1.13/sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.buffers/4.3.0/system.buffers.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.collections.concurrent/4.3.0/system.collections.concurrent.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.diagnostics.diagnosticsource/4.3.0/system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.diagnostics.tools/4.3.0/system.diagnostics.tools.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.diagnostics.tracing/4.3.0/system.diagnostics.tracing.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.globalization/4.3.0/system.globalization.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.globalization.calendars/4.3.0/system.globalization.calendars.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.globalization.extensions/4.3.0/system.globalization.extensions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.io.compression/4.3.0/system.io.compression.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.io.compression.zipfile/4.3.0/system.io.compression.zipfile.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.io.filesystem/4.3.0/system.io.filesystem.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.io.filesystem.primitives/4.3.0/system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.linq.expressions/4.3.0/system.linq.expressions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.net.http/4.3.0/system.net.http.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.net.primitives/4.3.0/system.net.primitives.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.net.sockets/4.3.0/system.net.sockets.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.objectmodel/4.3.0/system.objectmodel.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reactive/4.2.0/system.reactive.4.2.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection.emit/4.3.0/system.reflection.emit.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection.emit.ilgeneration/4.3.0/system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection.emit.lightweight/4.3.0/system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection.extensions/4.3.0/system.reflection.extensions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.reflection.typeextensions/4.3.0/system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.resources.resourcemanager/4.3.0/system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.extensions/4.3.0/system.runtime.extensions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.handles/4.3.0/system.runtime.handles.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.interopservices/4.3.0/system.runtime.interopservices.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.interopservices.runtimeinformation/4.3.0/system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.interopservices.windowsruntime/4.3.0/system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.runtime.numerics/4.3.0/system.runtime.numerics.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.algorithms/4.3.0/system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.cng/4.3.0/system.security.cryptography.cng.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.csp/4.3.0/system.security.cryptography.csp.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.encoding/4.3.0/system.security.cryptography.encoding.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.openssl/4.3.0/system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.primitives/4.3.0/system.security.cryptography.primitives.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.security.cryptography.x509certificates/4.3.0/system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.text.encoding.extensions/4.3.0/system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.text.regularexpressions/4.3.0/system.text.regularexpressions.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.threading.tasks.extensions/4.5.3/system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/xam.plugin.connectivity/3.1.1/xam.plugin.connectivity.3.1.1.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/xam.plugin.deviceinfo/3.1.0/xam.plugin.deviceinfo.3.1.0.nupkg.sha512",
+    "/Users/ndevalapally/.nuget/packages/zeroconf/3.3.2/zeroconf.3.3.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Bcl 1.1.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Bcl",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Bcl.Async 1.0.165' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Bcl.Async",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmCross.Binding 5.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmCross.Binding",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmCross.Core 5.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmCross.Core",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmCross.Platform 5.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmCross.Platform",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmCross.Plugin.Email 5.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmCross.Plugin.Email",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmCross.Plugin.File 5.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmCross.Plugin.File",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmCross.Plugin.Messenger 5.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmCross.Plugin.Messenger",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PCLStorage 1.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "PCLStorage",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'rda.SocketsForPCL 2.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "rda.SocketsForPCL",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    }
+  ]
+}

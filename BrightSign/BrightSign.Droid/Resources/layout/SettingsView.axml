@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#FAFAFB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/variables_top_view"
+            android:id="@+id/top_view" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/material_grey_50" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USER VARIABLE UPDATES"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/grey" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/refreshLayout"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/shadow">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automatic Refresh"
+                android:paddingLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+            <Switch
+                android:id="@+id/refreshSwitch"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                local:MvxBind="Checked AutomaticRefresh"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REMOTE SNAPSHOT"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/grey" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/snapShotLayout"
+            local:MvxBind="Click RemoteSnapshotsCommand"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/shadow">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text SnapshotText"
+                android:paddingLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+            <ImageButton
+                local:MvxBind="Visible IsSnapshotsAvailable"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrow"
+                android:background="@null"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actions Buttons"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/grey" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Button Size"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:id="@+id/btnSizeTxt"
+            android:paddingLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:weightSum="3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:id="@+id/smallBtnLayout"
+                android:orientation="vertical"
+                android:background="@drawable/round_corner_view">
+                <ImageButton
+                    android:id="@+id/smallBtn"
+                    android:paddingTop="10dp"
+                    android:layout_width="32dp"
+                    android:src="@drawable/action"
+                    android:paddingRight="10dp"
+                    android:layout_height="32dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Small"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:id="@+id/mediumBtnLayout"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/round_corner_view">
+                <ImageButton
+                    android:id="@+id/mediumBtn"
+                    android:paddingTop="10dp"
+                    android:layout_width="32dp"
+                    android:src="@drawable/action"
+                    android:paddingRight="10dp"
+                    android:layout_height="32dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:id="@+id/largeBtnLayout"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/round_corner_view">
+            <ImageButton
+                android:id="@+id/largeBtn"
+                android:paddingTop="10dp"
+                android:layout_width="32dp"
+                android:src="@drawable/action"
+                android:paddingRight="10dp"
+                android:layout_height="32dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large"
+                android:textSize="18dp"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

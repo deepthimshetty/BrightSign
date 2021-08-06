@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{B017FA41-2730-4F4D-AAFB-FBF714B66738}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BrightSign.iOS</RootNamespace>
+    <AssemblyName>BrightSign.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Sathish Kondi (6H5TFUS9AT)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>64890</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity></MtouchVerbosity>
+    <CodesignProvision>VS: biz.BrightSign.BrightSign Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>Apple Distribution: BrightSign, LLC (5QT5WFK4G3)</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+    <IpaPackageDir>$(OutputPath)</IpaPackageDir>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>BrightSign-New-Dist-Cert</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: BrightSign, LLC (5QT5WFK4G3)</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>Apple Development: Mobility  Innominds (3QFJC6JA8R)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>47361</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+    <CodesignProvision>BrightSign-INM-Dev-Profile</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.6.3\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.6.3\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.5.6.3\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\..\packages\MvvmCross.Core.5.6.3\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.6.3\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.6.3\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.6.3\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\..\packages\System.Reactive.Interfaces.3.1.1\lib\netstandard1.0\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\..\packages\System.Reactive.Core.3.1.1\lib\netstandard1.3\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\..\packages\System.Reactive.Linq.3.1.1\lib\netstandard1.3\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\..\packages\System.Reactive.PlatformServices.3.1.1\lib\netstandard1.3\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\..\packages\BTProgressHUD.1.2.0.6\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Messenger.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.1.1\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.1.1\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.3.1.0\lib\Xamarin.iOS10\Plugin.DeviceInfo.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo">
+      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.3.1.0\lib\Xamarin.iOS10\Plugin.DeviceInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\..\packages\SQLitePCLRaw.core.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.Support.iOS">
+      <HintPath>..\..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.2.0.0\lib\Xamarin.iOS10\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Email">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Email.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Email.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Email.5.6.3\lib\Xamarin.iOS10\MvvmCross.Plugins.Email.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>..\..\packages\System.Reactive.4.2.0\lib\netstandard2.0\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeroconf">
+      <HintPath>..\..\packages\Zeroconf.3.3.2\lib\netstandard2.0\Zeroconf.dll</HintPath>
+    </Reference>
+    <Reference Include="Sockets.Plugin.Abstractions">
+      <HintPath>..\..\packages\rda.SocketsForPCL.2.0.2\lib\Xamarin.iOS10\Sockets.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sockets.Plugin">
+      <HintPath>..\..\packages\rda.SocketsForPCL.2.0.2\lib\Xamarin.iOS10\Sockets.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.6.292\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\..\packages\Microsoft.AppCenter.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="NtlmHttpHandler">
+      <HintPath>..\..\packages\NtlmHttpHandler.1.0.2\lib\netstandard2.0\NtlmHttpHandler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\1125x2436.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\1242x2208.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\750x1334.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\2048x2732.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\640x960.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\768x1024.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\1536x2048.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\320x480.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\768x1004.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\640x1136.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-20x20%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-20x20%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-57x57%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-57x57%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-60x60%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-72x72%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-72x72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-76x76%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-Small-50x50%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\Icon-Small-50x50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconBeta.appiconset\ItunesArtwork%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-20x20%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-20x20%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-57x57%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-57x57%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-60x60%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-72x72%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-72x72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-76x76%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-Small-50x50%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\Icon-Small-50x50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconCorrect.appiconset\ItunesArtwork%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Utility\Interface\" />
+    <Folder Include="Views\AddDevice\" />
+    <Folder Include="Views\Main\" />
+    <Folder Include="Views\Home\CustomViews\" />
+    <Folder Include="Views\Settings\" />
+    <Folder Include="Views\BSUnits\" />
+    <Folder Include="Views\CustomViews\" />
+    <Folder Include="Views\SearchUnits\" />
+    <Folder Include="Views\Units\" />
+    <Folder Include="Utility\Converters\" />
+    <Folder Include="Views\ManageActions\" />
+    <Folder Include="Assets.xcassets\AppIconBeta.appiconset\" />
+    <Folder Include="Assets.xcassets\AppIconCorrect.appiconset\" />
+    <Folder Include="Assets.xcassets\AppIconCorrect.appiconset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="Views\Home\VariablesViewController.cs" />
+    <Compile Include="Views\Home\VariablesViewController.designer.cs">
+      <DependentUpon>VariablesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ActionsViewController.cs" />
+    <Compile Include="Views\Home\ActionsViewController.designer.cs">
+      <DependentUpon>ActionsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\DiagnosticsViewController.cs" />
+    <Compile Include="Views\Home\DiagnosticsViewController.designer.cs">
+      <DependentUpon>DiagnosticsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Interface\DialogService.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Views\Main\MainViewController.cs" />
+    <Compile Include="Views\Main\MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\CustomViews\BSSwitchTableViewCell.cs" />
+    <Compile Include="Views\Home\CustomViews\BSSwitchTableViewCell.designer.cs">
+      <DependentUpon>BSSwitchTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\CustomViews\BSSizeSelectTableViewCell.cs" />
+    <Compile Include="Views\Home\CustomViews\BSSizeSelectTableViewCell.designer.cs">
+      <DependentUpon>BSSizeSelectTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsViewController.cs" />
+    <Compile Include="Views\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\DeviceSelectController.cs" />
+    <Compile Include="Views\Settings\DeviceSelectController.designer.cs">
+      <DependentUpon>DeviceSelectController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\DeviceDetailController.cs" />
+    <Compile Include="Views\Settings\DeviceDetailController.designer.cs">
+      <DependentUpon>DeviceDetailController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsViewTableViewSource.cs" />
+    <Compile Include="Views\Home\CustomViews\ActionViewCollectionViewSource.cs" />
+    <Compile Include="Views\Home\CustomViews\ActionViewCell.cs" />
+    <Compile Include="Views\Home\CustomViews\ActionViewCell.designer.cs">
+      <DependentUpon>ActionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BSUnits\BSSelectUnitsViewController.cs" />
+    <Compile Include="Views\BSUnits\BSSelectUnitsViewController.designer.cs">
+      <DependentUpon>BSSelectUnitsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BSUnits\BSManageUnitsViewController.cs" />
+    <Compile Include="Views\BSUnits\BSManageUnitsViewController.designer.cs">
+      <DependentUpon>BSManageUnitsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BSUnits\BSSelectUnitsTableViewSource.cs" />
+    <Compile Include="Views\BSUnits\BSManageUnitsTableViewSource.cs" />
+    <Compile Include="Utility\Interface\iOSUserPreferences.cs" />
+    <Compile Include="Views\Settings\RemoteSnapshotViewController.cs" />
+    <Compile Include="Views\Settings\RemoteSnapshotViewController.designer.cs">
+      <DependentUpon>RemoteSnapshotViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SnapshotsViewController.cs" />
+    <Compile Include="Views\Settings\SnapshotsViewController.designer.cs">
+      <DependentUpon>SnapshotsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\SnapShotCollectionViewCell.cs" />
+    <Compile Include="Views\CustomViews\SnapShotCollectionViewCell.designer.cs">
+      <DependentUpon>SnapShotCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\SnapshotCollectionViewSource.cs" />
+
+    <Compile Include="Views\Home\ShareViewController.cs" />
+    <Compile Include="Views\Home\ShareViewController.designer.cs">
+      <DependentUpon>ShareViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Utility\ImageTransformConverter.cs" />
+    <Compile Include="Utility\Interface\DBHelper.cs" />
+    <Compile Include="Utility\Interface\SQLite.cs" />
+    <Compile Include="Views\SearchUnits\SearchUnitsView.cs" />
+    <Compile Include="Views\SearchUnits\SearchUnitsView.designer.cs">
+      <DependentUpon>SearchUnitsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Units\UnitsViewController.cs" />
+    <Compile Include="Views\Units\UnitsViewController.designer.cs">
+      <DependentUpon>UnitsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\BaseView.cs" />
+    <Compile Include="Utility\UIColorUtility.cs" />
+    <Compile Include="Views\CustomViews\TabView.cs" />
+    <Compile Include="Views\CustomViews\TabView.designer.cs">
+      <DependentUpon>TabView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\GradientView.cs" />
+    <Compile Include="Views\CustomViews\DeviceTableViewCell.cs" />
+    <Compile Include="Views\CustomViews\DeviceTableViewCell.designer.cs">
+      <DependentUpon>DeviceTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\ShadowView.cs" />
+    <Compile Include="Views\CustomViews\RoundedButton.cs" />
+    <Compile Include="Utility\MvxDeleteStandardTableViewSource.cs" />
+    <Compile Include="Views\AddDevice\AddDeviceView.cs" />
+    <Compile Include="Views\AddDevice\AddDeviceView.designer.cs">
+      <DependentUpon>AddDeviceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\DeviceInfo.cs" />
+    <Compile Include="Views\CustomViews\DeviceInfo.designer.cs">
+      <DependentUpon>DeviceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\SearchDeviceItemTemplate.cs" />
+    <Compile Include="Views\CustomViews\SearchDeviceItemTemplate.designer.cs">
+      <DependentUpon>SearchDeviceItemTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\ShadowView.designer.cs">
+      <DependentUpon>ShadowView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\BorderButton.cs" />
+    <Compile Include="Utility\Interface\CustomAlert.cs" />
+    <Compile Include="Views\CustomViews\CustomAlertView.cs" />
+    <Compile Include="Views\CustomViews\CustomAlertView.designer.cs">
+      <DependentUpon>CustomAlertView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\BorderShadowView.cs" />
+    <Compile Include="Views\CustomViews\SizeButton.cs" />
+    <Compile Include="Views\CustomViews\SizeButton.designer.cs">
+      <DependentUpon>SizeButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\MvxEditDeleteStandardTableViewSource.cs" />
+    <Compile Include="Views\ManageActions\ManageActionsViewController.cs" />
+    <Compile Include="Views\ManageActions\ManageActionsViewController.designer.cs">
+      <DependentUpon>ManageActionsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomViews\ManageActionTableViewCell.cs" />
+    <Compile Include="Views\CustomViews\ManageActionTableViewCell.designer.cs">
+      <DependentUpon>ManageActionTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Interface\DocumentDownloader_iOS.cs" />
+    <Compile Include="Bootstrap\EmailPluginBootstrap.cs" />
+    <Compile Include="Views\ManageActions\ActionsDraggableCollectionViewSource.cs" />
+    <Compile Include="Utility\Converters\ImageDataConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrightSign.Core\BrightSign.Core.csproj">
+      <Project>{B20B630A-57F4-4450-9D5B-4923E55ED5AC}</Project>
+      <Name>BrightSign.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrightSign.Localization\BrightSign.Localization.csproj">
+      <Project>{7A0926D2-0A04-44E1-8518-3051C0AB33B0}</Project>
+      <Name>BrightSign.Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\Home\VariablesViewController.xib" />
+    <InterfaceDefinition Include="Views\Home\ActionsViewController.xib" />
+    <InterfaceDefinition Include="Views\Home\DiagnosticsViewController.xib" />
+    <InterfaceDefinition Include="Views\Main\MainViewController.xib" />
+    <InterfaceDefinition Include="Views\Home\CustomViews\BSSwitchTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\Home\CustomViews\BSSizeSelectTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsViewController.xib" />
+    <InterfaceDefinition Include="Views\Settings\DeviceSelectController.xib" />
+    <InterfaceDefinition Include="Views\Settings\DeviceDetailController.xib" />
+    <InterfaceDefinition Include="Views\Home\CustomViews\ActionViewCell.xib" />
+    <InterfaceDefinition Include="Views\BSUnits\BSSelectUnitsViewController.xib" />
+    <InterfaceDefinition Include="Views\BSUnits\BSManageUnitsViewController.xib" />
+    <InterfaceDefinition Include="Views\Settings\RemoteSnapshotViewController.xib" />
+    <InterfaceDefinition Include="Views\Settings\SnapshotsViewController.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\SnapShotCollectionViewCell.xib" />
+    <InterfaceDefinition Include="Views\Home\ShareViewController.xib" />
+    <InterfaceDefinition Include="Views\SearchUnits\SearchUnitsView.xib" />
+    <InterfaceDefinition Include="Views\Units\UnitsViewController.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\TabView.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\DeviceTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\AddDevice\AddDeviceView.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\DeviceInfoView.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\SearchDeviceTemplate.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\CustomAlertView.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\SizeButtonView.xib" />
+    <InterfaceDefinition Include="Views\ManageActions\ManageActionsViewController.xib" />
+    <InterfaceDefinition Include="Views\CustomViews\ManageActionTableViewCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_launcher.png" />
+    <BundleResource Include="Resources\64-zap.png" />
+    <BundleResource Include="Resources\179-notepad.png" />
+    <BundleResource Include="Resources\157-wrench.png" />
+    <BundleResource Include="Resources\86-camera.png" />
+    <BundleResource Include="Resources\19-gear.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\forward.png" />
+    <BundleResource Include="Resources\icon_rotate_left.png" />
+    <BundleResource Include="Resources\icon_rotate_left%402x.png" />
+    <BundleResource Include="Resources\icon_rotate_left%403x.png" />
+    <BundleResource Include="Resources\icon_rotate_right.png" />
+    <BundleResource Include="Resources\icon_rotate_right%402x.png" />
+    <BundleResource Include="Resources\icon_rotate_right%403x.png" />
+    <BundleResource Include="Resources\searchunits.png" />
+    <BundleResource Include="Resources\searchunits%402x.png" />
+    <BundleResource Include="Resources\searchunits%403x.png" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\check%402x.png" />
+    <BundleResource Include="Resources\check%403x.png" />
+    <BundleResource Include="Resources\ic_add_white_2x.png" />
+    <BundleResource Include="Resources\ic_add_white_3x.png" />
+    <BundleResource Include="Resources\ic_add_white.png" />
+    <BundleResource Include="Resources\close.png" />
+    <BundleResource Include="Resources\close%402x.png" />
+    <BundleResource Include="Resources\close%403x.png" />
+    <BundleResource Include="Resources\refresh.png" />
+    <BundleResource Include="Resources\refresh%402x.png" />
+    <BundleResource Include="Resources\refresh%403x.png" />
+    <BundleResource Include="Resources\rightchevron.png" />
+    <BundleResource Include="Resources\rightchevron%402x.png" />
+    <BundleResource Include="Resources\rightchevron%403x.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\logo%403x.png" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\settings%402x.png" />
+    <BundleResource Include="Resources\settings%403x.png" />
+    <BundleResource Include="Resources\actions.png" />
+    <BundleResource Include="Resources\actions%402x.png" />
+    <BundleResource Include="Resources\actions%403x.png" />
+    <BundleResource Include="Resources\gallery.png" />
+    <BundleResource Include="Resources\gallery%402x.png" />
+    <BundleResource Include="Resources\gallery%403x.png" />
+    <BundleResource Include="Resources\variables.png" />
+    <BundleResource Include="Resources\variables%402x.png" />
+    <BundleResource Include="Resources\variables%403x.png" />
+    <BundleResource Include="Resources\diagnostics.png" />
+    <BundleResource Include="Resources\diagnostics%402x.png" />
+    <BundleResource Include="Resources\diagnostics%403x.png" />
+    <BundleResource Include="Resources\success_icon.png" />
+    <BundleResource Include="Resources\button_selected.png" />
+    <BundleResource Include="Resources\button_selected%402x.png" />
+    <BundleResource Include="Resources\button_selected%403x.png" />
+    <BundleResource Include="Resources\button_unselected.png" />
+    <BundleResource Include="Resources\button_unselected%402x.png" />
+    <BundleResource Include="Resources\button_unselected%403x.png" />
+    <BundleResource Include="Resources\i4k242_fancy.png" />
+    <BundleResource Include="Resources\i4k242_fancy%402x.png" />
+    <BundleResource Include="Resources\i4k242_fancy%403x.png" />
+    <BundleResource Include="Resources\i4k1042_fancy.png" />
+    <BundleResource Include="Resources\i4k1042_fancy%402x.png" />
+    <BundleResource Include="Resources\i4k1042_fancy%403x.png" />
+    <BundleResource Include="Resources\i4k1142_fancy.png" />
+    <BundleResource Include="Resources\i4k1142_fancy%402x.png" />
+    <BundleResource Include="Resources\i4k1142_fancy%403x.png" />
+    <BundleResource Include="Resources\i120.png" />
+    <BundleResource Include="Resources\i120%402x.png" />
+    <BundleResource Include="Resources\i120%403x.png" />
+    <BundleResource Include="Resources\hd220.png" />
+    <BundleResource Include="Resources\hd220%402x.png" />
+    <BundleResource Include="Resources\hd220%403x.png" />
+    <BundleResource Include="Resources\hd222.png" />
+    <BundleResource Include="Resources\hd222%402x.png" />
+    <BundleResource Include="Resources\hd222%403x.png" />
+    <BundleResource Include="Resources\hd223.png" />
+    <BundleResource Include="Resources\hd223%402x.png" />
+    <BundleResource Include="Resources\hd223%403x.png" />
+    <BundleResource Include="Resources\hd1020.png" />
+    <BundleResource Include="Resources\hd1020%402x.png" />
+    <BundleResource Include="Resources\hd1020%403x.png" />
+    <BundleResource Include="Resources\hd1022.png" />
+    <BundleResource Include="Resources\hd1022%402x.png" />
+    <BundleResource Include="Resources\hd1022%403x.png" />
+    <BundleResource Include="Resources\hd1023.png" />
+    <BundleResource Include="Resources\hd1023%402x.png" />
+    <BundleResource Include="Resources\hd1023%403x.png" />
+    <BundleResource Include="Resources\ls423.png" />
+    <BundleResource Include="Resources\ls423%402x.png" />
+    <BundleResource Include="Resources\ls423%403x.png" />
+    <BundleResource Include="Resources\ops.png" />
+    <BundleResource Include="Resources\ops%402x.png" />
+    <BundleResource Include="Resources\ops%403x.png" />
+    <BundleResource Include="Resources\xd230.png" />
+    <BundleResource Include="Resources\xd230%402x.png" />
+    <BundleResource Include="Resources\xd230%403x.png" />
+    <BundleResource Include="Resources\xd232.png" />
+    <BundleResource Include="Resources\xd232%402x.png" />
+    <BundleResource Include="Resources\xd232%403x.png" />
+    <BundleResource Include="Resources\xd233.png" />
+    <BundleResource Include="Resources\xd233%402x.png" />
+    <BundleResource Include="Resources\xd233%403x.png" />
+    <BundleResource Include="Resources\xd1030.png" />
+    <BundleResource Include="Resources\xd1030%402x.png" />
+    <BundleResource Include="Resources\xd1030%403x.png" />
+    <BundleResource Include="Resources\xd1032_1132.png" />
+    <BundleResource Include="Resources\xd1032_1132%402x.png" />
+    <BundleResource Include="Resources\xd1032_1132%403x.png" />
+    <BundleResource Include="Resources\xd1033.png" />
+    <BundleResource Include="Resources\xd1033%402x.png" />
+    <BundleResource Include="Resources\xd1033%403x.png" />
+    <BundleResource Include="Resources\xd1230_skewed.png" />
+    <BundleResource Include="Resources\xd1230_skewed%402x.png" />
+    <BundleResource Include="Resources\xd1230_skewed%403x.png" />
+    <BundleResource Include="Resources\xt243.png" />
+    <BundleResource Include="Resources\xt243%402x.png" />
+    <BundleResource Include="Resources\xt243%403x.png" />
+    <BundleResource Include="Resources\xt1143.png" />
+    <BundleResource Include="Resources\xt1143%402x.png" />
+    <BundleResource Include="Resources\xt1143%403x.png" />
+    <BundleResource Include="Resources\bsbi.png" />
+    <BundleResource Include="Resources\bsbi%402x.png" />
+    <BundleResource Include="Resources\bsbi%403x.png" />
+    <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\delete%402x.png" />
+    <BundleResource Include="Resources\delete%403x.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\edit%402x.png" />
+    <BundleResource Include="Resources\edit%403x.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\home%402x.png" />
+    <BundleResource Include="Resources\home%403x.png" />
+    <BundleResource Include="Resources\ic_chevron_left_white_2x.png" />
+    <BundleResource Include="Resources\ic_chevron_left_white_3x.png" />
+    <BundleResource Include="Resources\ic_chevron_left_white.png" />
+    <BundleResource Include="Resources\ic_home_white_2x.png" />
+    <BundleResource Include="Resources\ic_home_white_3x.png" />
+    <BundleResource Include="Resources\ic_home_white.png" />
+    <BundleResource Include="Resources\ic_rotate_right_white_2x.png" />
+    <BundleResource Include="Resources\ic_rotate_right_white_3x.png" />
+    <BundleResource Include="Resources\ic_rotate_right_white.png" />
+    <BundleResource Include="Resources\ic_rotate_left_white_2x.png" />
+    <BundleResource Include="Resources\ic_rotate_left_white_3x.png" />
+    <BundleResource Include="Resources\ic_rotate_left_white.png" />
+    <BundleResource Include="Resources\settings_new%403x.png" />
+    <BundleResource Include="Resources\settings_new%402x.png" />
+    <BundleResource Include="Resources\settings_new.png" />
+    <BundleResource Include="Resources\actions_new.png" />
+    <BundleResource Include="Resources\actions_new%402x.png" />
+    <BundleResource Include="Resources\actions_new%403x.png" />
+    <BundleResource Include="Resources\diagnostics_new.png" />
+    <BundleResource Include="Resources\diagnostics_new%402x.png" />
+    <BundleResource Include="Resources\diagnostics_new%403x.png" />
+    <BundleResource Include="Resources\gallery_new.png" />
+    <BundleResource Include="Resources\gallery_new%402x.png" />
+    <BundleResource Include="Resources\gallery_new%403x.png" />
+    <BundleResource Include="Resources\variables_new.png" />
+    <BundleResource Include="Resources\variables_new%402x.png" />
+    <BundleResource Include="Resources\variables_new%403x.png" />
+    <BundleResource Include="Resources\ho523.png" />
+    <BundleResource Include="Resources\ls_front.png" />
+    <BundleResource Include="Resources\roadster.png" />
+    <BundleResource Include="Resources\ho523%402x.png" />
+    <BundleResource Include="Resources\ho523%403x.png" />
+    <BundleResource Include="Resources\ls_front%402x.png" />
+    <BundleResource Include="Resources\ls_front%403x.png" />
+    <BundleResource Include="Resources\roadster%402x.png" />
+    <BundleResource Include="Resources\roadster%403x.png" />
+    <BundleResource Include="Resources\baseline_rotate_left_white.png" />
+    <BundleResource Include="Resources\baseline_rotate_left_white%402x.png" />
+    <BundleResource Include="Resources\baseline_rotate_left_white%403x.png" />
+    <BundleResource Include="Resources\baseline_rotate_right_white.png" />
+    <BundleResource Include="Resources\baseline_rotate_right_white%402x.png" />
+    <BundleResource Include="Resources\baseline_rotate_right_white%403x.png" />
+    <BundleResource Include="Resources\upload.png" />
+    <BundleResource Include="Resources\baseline_share_white.png" />
+    <BundleResource Include="Resources\baseline_share_white%402x.png" />
+    <BundleResource Include="Resources\baseline_share_white%403x.png" />
+    <BundleResource Include="Resources\hd1024.png" />
+    <BundleResource Include="Resources\ls424%403x.png" />
+    <BundleResource Include="Resources\ls424%402x.png" />
+    <BundleResource Include="Resources\ls424.png" />
+    <BundleResource Include="Resources\hd1024%403x.png" />
+    <BundleResource Include="Resources\hd1024%402x.png" />
+    <BundleResource Include="Resources\au325.png" />
+    <BundleResource Include="Resources\au325%402x.png" />
+    <BundleResource Include="Resources\au325%403x.png" />
+    <BundleResource Include="Resources\cvhd.png" />
+    <BundleResource Include="Resources\cvhd%402x.png" />
+    <BundleResource Include="Resources\cvhd%403x.png" />
+    <BundleResource Include="Resources\cvhd2.png" />
+    <BundleResource Include="Resources\cvhd2%402x.png" />
+    <BundleResource Include="Resources\cvhd2%403x.png" />
+    <BundleResource Include="Resources\cvuhd.png" />
+    <BundleResource Include="Resources\cvuhd%402x.png" />
+    <BundleResource Include="Resources\cvuhd%403x.png" />
+    <BundleResource Include="Resources\cvuhd2.png" />
+    <BundleResource Include="Resources\cvuhd2%402x.png" />
+    <BundleResource Include="Resources\cvuhd2%403x.png" />
+    <BundleResource Include="Resources\sstbphd.png" />
+    <BundleResource Include="Resources\sstbphd%402x.png" />
+    <BundleResource Include="Resources\sstbphd%403x.png" />
+    <BundleResource Include="Resources\sstbphd2.png" />
+    <BundleResource Include="Resources\sstbphd2%402x.png" />
+    <BundleResource Include="Resources\sstbphd2%403x.png" />
+    <BundleResource Include="Resources\tpsspi4.png" />
+    <BundleResource Include="Resources\tpsspi4%402x.png" />
+    <BundleResource Include="Resources\tpsspi4%403x.png" />
+    <BundleResource Include="Resources\xd234.png" />
+    <BundleResource Include="Resources\xd234%402x.png" />
+    <BundleResource Include="Resources\xd234%403x.png" />
+    <BundleResource Include="Resources\xd1034.png" />
+    <BundleResource Include="Resources\xd1034%402x.png" />
+    <BundleResource Include="Resources\xd1034%403x.png" />
+    <BundleResource Include="Resources\hd224.png" />
+    <BundleResource Include="Resources\hd224%402x.png" />
+    <BundleResource Include="Resources\hd224%403x.png" />
+    <BundleResource Include="Resources\xt244.png" />
+    <BundleResource Include="Resources\xt244%402x.png" />
+    <BundleResource Include="Resources\xt244%403x.png" />
+    <BundleResource Include="Resources\xt1144.png" />
+    <BundleResource Include="Resources\xt1144%402x.png" />
+    <BundleResource Include="Resources\xt1144%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <LinkDescription Include="LinkerNew.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Target Name="BeforeBuild" Condition=" $(SetVersion) == true ">
+  <!-- This parses the semantic version number from the shared code assembly (e.g. PCL) -->
+  <!-- <GetAssemblyIdentity AssemblyFiles="$(AssemblyPath)">
+    <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+  </GetAssemblyIdentity>
+  <PropertyGroup>
+    <VersionNumber>$([System.Text.RegularExpressions.Regex]::Match(%(AssemblyInfo.Version), '[^.][^.]*.[^.]*.[^.]*'))</VersionNumber>
+  </PropertyGroup> -->
+  <XmlPoke XmlInputPath="Info.plist" Query="//dict/key[. = 'CFBundleVersion']/following-sibling::string[1]" Value="$(BuildNumber)" />
+  <XmlPoke XmlInputPath="Info.plist" Query="//dict/key[. = 'CFBundleShortVersionString']/following-sibling::string[1]" Value="$(VersionNumber)" />
+</Target>
+</Project>

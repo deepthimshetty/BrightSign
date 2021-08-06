@@ -1,0 +1,148 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj": {}
+  },
+  "projects": {
+    "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
+        "projectName": "BrightSign.Core",
+        "projectPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
+        "packagesPath": "/Users/ndevalapally/.nuget/packages/",
+        "outputPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ndevalapally/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj": {
+                "projectPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            },
+            "MvvmCross": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "MvvmCross.Binding": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "MvvmCross.Core": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "MvvmCross.Platform": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "MvvmCross.Plugin.Email": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "MvvmCross.Plugin.File": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "MvvmCross.Plugin.Messenger": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "NtlmHttpHandler": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "PCLStorage": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Xam.Plugin.DeviceInfo": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Zeroconf": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "rda.SocketsForPCL": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.6.292, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj": {
+      "restore": {
+        "projectUniqueName": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj",
+        "projectName": "BrightSign.Localization",
+        "projectPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj"
+      },
+      "frameworks": {
+        "portable45-net45+win8+wpa81": {}
+      }
+    }
+  }
+}

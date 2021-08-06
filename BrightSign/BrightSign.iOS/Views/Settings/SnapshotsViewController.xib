@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SnapshotsViewController">
+            <connections>
+                <outlet property="deviceInfoView" destination="LBK-Ha-CNd" id="s2a-Ha-MIH"/>
+                <outlet property="snapshotsCollectnVw" destination="vUm-WT-BLx" id="L74-Xe-mVs"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vUm-WT-BLx">
+                    <rect key="frame" x="0.0" y="120" width="375" height="503"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BER-CE-wjs">
+                        <size key="itemSize" width="150" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="2" id="EGH-eJ-vGd"/>
+                        <outlet property="delegate" destination="2" id="9Pf-hA-MjV"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ha-CNd" customClass="DeviceInfo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="Hb7-Ic-dl5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LBK-Ha-CNd" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="2qM-Yi-Efq"/>
+                <constraint firstAttribute="trailing" secondItem="vUm-WT-BLx" secondAttribute="trailing" id="4mx-bI-0tR"/>
+                <constraint firstItem="vUm-WT-BLx" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="BvE-ei-2Av"/>
+                <constraint firstItem="LBK-Ha-CNd" firstAttribute="top" secondItem="2" secondAttribute="top" id="RO0-d3-lTG"/>
+                <constraint firstAttribute="trailing" secondItem="LBK-Ha-CNd" secondAttribute="trailing" id="Waj-1V-5IK"/>
+                <constraint firstItem="vUm-WT-BLx" firstAttribute="top" secondItem="LBK-Ha-CNd" secondAttribute="bottom" id="lMN-WJ-OEr"/>
+                <constraint firstAttribute="bottom" secondItem="vUm-WT-BLx" secondAttribute="bottom" constant="44" id="sKp-0O-DlX"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

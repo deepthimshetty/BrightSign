@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
+            <connections>
+                <outlet property="imageView" destination="gb6-Xc-CrP" id="Gb9-C3-ypD"/>
+                <outlet property="leftRotateBtn" destination="THo-KS-JI1" id="PpY-aV-oyy"/>
+                <outlet property="rightRotateBtn" destination="AbV-rn-jLW" id="PXR-F5-NPS"/>
+                <outlet property="scrollView" destination="aqU-w5-jck" id="JMz-UH-3VO"/>
+                <outlet property="shareBtn" destination="onB-EV-2KI" id="8je-Hb-xHn"/>
+                <outlet property="toolBar" destination="29k-jL-59C" id="svK-fi-elY"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqU-w5-jck">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gb6-Xc-CrP">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="gb6-Xc-CrP" secondAttribute="bottom" id="QbA-53-mqt"/>
+                        <constraint firstAttribute="trailing" secondItem="gb6-Xc-CrP" secondAttribute="trailing" id="dWh-qF-Z5S"/>
+                        <constraint firstItem="gb6-Xc-CrP" firstAttribute="top" secondItem="aqU-w5-jck" secondAttribute="top" id="uKN-3B-PeU"/>
+                        <constraint firstItem="gb6-Xc-CrP" firstAttribute="leading" secondItem="aqU-w5-jck" secondAttribute="leading" id="xRw-4S-jeJ"/>
+                    </constraints>
+                </scrollView>
+                <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29k-jL-59C">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="action" id="onB-EV-2KI"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RnV-oF-YcC"/>
+                        <barButtonItem image="icon_rotate_left.png" id="THo-KS-JI1"/>
+                        <barButtonItem image="icon_rotate_right.png" id="AbV-rn-jLW"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aqU-w5-jck" secondAttribute="trailing" id="3TX-HG-iEz"/>
+                <constraint firstItem="gb6-Xc-CrP" firstAttribute="height" secondItem="2" secondAttribute="height" id="ByI-hn-yhk"/>
+                <constraint firstItem="gb6-Xc-CrP" firstAttribute="width" secondItem="2" secondAttribute="width" id="MLo-PO-INA"/>
+                <constraint firstItem="29k-jL-59C" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Tbh-DG-lAk"/>
+                <constraint firstAttribute="trailing" secondItem="29k-jL-59C" secondAttribute="trailing" id="cSx-eG-lJn"/>
+                <constraint firstItem="aqU-w5-jck" firstAttribute="top" secondItem="2" secondAttribute="top" id="egW-uj-KOA"/>
+                <constraint firstAttribute="bottom" secondItem="aqU-w5-jck" secondAttribute="bottom" id="h5A-Gf-00Z"/>
+                <constraint firstAttribute="bottom" secondItem="29k-jL-59C" secondAttribute="bottom" id="u6e-L4-0u4"/>
+                <constraint firstItem="aqU-w5-jck" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="wyi-7q-iwf"/>
+            </constraints>
+            <point key="canvasLocation" x="39.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_rotate_left.png" width="22" height="22"/>
+        <image name="icon_rotate_right.png" width="22" height="22"/>
+    </resources>
+</document>

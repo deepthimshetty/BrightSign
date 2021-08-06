@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvx="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_height="@dimen/section_height"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/actionText"
+            mvx:MvxBind="Text Label"
+            android:textSize="13sp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black" />
+        <ImageButton
+            android:id="@+id/dragButton"
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:src="@drawable/ic_reorder"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+        />
+        <View
+            android:background="#e9eaf0"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent" />
+    </RelativeLayout>
+</LinearLayout>

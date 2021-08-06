@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="tabLine" destination="QDY-UG-r2O" id="35F-fG-9aw"/>
+                <outlet property="tabTitle" destination="NYx-zX-wB8" id="Phs-DZ-RPI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="TabView">
+            <rect key="frame" x="0.0" y="0.0" width="258" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYx-zX-wB8">
+                    <rect key="frame" x="108" y="0.0" width="42" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDY-UG-r2O">
+                    <rect key="frame" x="8" y="40" width="242" height="5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="IfG-dM-N1h"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QDY-UG-r2O" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="NZx-LI-wGM"/>
+                <constraint firstItem="NYx-zX-wB8" firstAttribute="top" secondItem="1" secondAttribute="top" id="gfe-ua-hJu"/>
+                <constraint firstItem="QDY-UG-r2O" firstAttribute="top" secondItem="NYx-zX-wB8" secondAttribute="bottom" id="oUn-w0-0UE"/>
+                <constraint firstItem="QDY-UG-r2O" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="pnl-6c-CQV"/>
+                <constraint firstAttribute="bottom" secondItem="QDY-UG-r2O" secondAttribute="bottom" constant="8" id="ryL-sA-FVk"/>
+                <constraint firstItem="NYx-zX-wB8" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="tHh-Js-grn"/>
+                <constraint firstAttribute="trailing" secondItem="QDY-UG-r2O" secondAttribute="trailing" constant="8" id="wUX-0D-RAm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tabLine" destination="QDY-UG-r2O" id="msP-NM-aeK"/>
+                <outlet property="tabTitle" destination="NYx-zX-wB8" id="RfP-qJ-ufo"/>
+            </connections>
+            <point key="canvasLocation" x="-25" y="-213.5"/>
+        </view>
+    </objects>
+</document>

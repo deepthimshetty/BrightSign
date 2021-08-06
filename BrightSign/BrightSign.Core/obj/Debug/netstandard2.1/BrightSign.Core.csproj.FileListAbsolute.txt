@@ -1,0 +1,12 @@
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Core.deps.json
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Core.dll
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Core.pdb
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Localization.dll
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Localization.pdb
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csprojAssemblyReference.cache
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.AssemblyInfoInputs.cache
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.AssemblyInfo.cs
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csproj.CoreCompileInputs.cache
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csproj.CopyComplete
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.dll
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.pdb

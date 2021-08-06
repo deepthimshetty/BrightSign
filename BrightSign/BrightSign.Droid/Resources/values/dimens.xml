@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="drawer_width">240dp</dimen>
+    <dimen name="margin_left">15dp</dimen>
+    <dimen name="margin_right">15dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_top_medium">15dp</dimen>
+    <dimen name="margin_bottom">10dp</dimen>
+    <dimen name="margin_top_section">30dp</dimen>
+    <dimen name="margin_bottom_section">30dp</dimen>
+    <dimen name="font_size_medium">8pt</dimen>
+    <dimen name="font_size_normal">6pt</dimen>
+    <dimen name="font_size_large">10pt</dimen>
+    <dimen name="section_height">55dp</dimen>
+    <dimen name="cell_height">50dp</dimen>
+    <dimen name="progress_ring_width">50dp</dimen>
+</resources>

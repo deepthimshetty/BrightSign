@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="5.6.3" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.6.3" />
+    <PackageReference Include="MvvmCross.Core" Version="5.6.3" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.6.3" />
+    <PackageReference Include="Zeroconf" Version="3.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="5.6.3" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.1.1" />
+    <PackageReference Include="Xam.Plugin.DeviceInfo" Version="3.1.0" />
+    <PackageReference Include="MvvmCross.Plugin.File" Version="5.6.3" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="MvvmCross.Plugin.Email" Version="5.6.3" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
+    <PackageReference Include="rda.SocketsForPCL" Version="2.0.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.1" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.1" />
+    <PackageReference Include="NtlmHttpHandler" Version="1.0.2" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Utility\Interface\" />
+    <Folder Include="ViewModels\AddDevice\" />
+    <Folder Include="Utility\Web\" />
+    <Folder Include="Utility\Converters\" />
+    <Folder Include="Utility\Messages\" />
+    <Folder Include="ViewModels\Settings\" />
+    <Folder Include="Utility\Database\" />
+    <Folder Include="ViewModels\SearchUnits\" />
+    <Folder Include="ViewModels\Units\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrightSign.Localization\BrightSign.Localization.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ViewModels\AddActionViewModel.cs" />
+  </ItemGroup>
+</Project>

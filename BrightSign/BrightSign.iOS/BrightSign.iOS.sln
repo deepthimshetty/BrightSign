@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrightSign.iOS", "BrightSign.iOS.csproj", "{B017FA41-2730-4F4D-AAFB-FBF714B66738}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Release|iPhone.ActiveCfg = Release|iPhone
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Release|iPhone.Build.0 = Release|iPhone
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{B017FA41-2730-4F4D-AAFB-FBF714B66738}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

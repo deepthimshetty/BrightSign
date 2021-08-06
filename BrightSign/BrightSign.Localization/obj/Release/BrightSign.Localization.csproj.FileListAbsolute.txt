@@ -1,0 +1,6 @@
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/bin/Release/BrightSign.Localization.dll
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/obj/Release/BrightSign.Localization.Strings.resources
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/obj/Release/BrightSign.Localization.csproj.GenerateResource.cache
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/obj/Release/BrightSign.Localization.csproj.CoreCompileInputs.cache
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/obj/Release/BrightSign.Localization.dll
+/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/obj/Release/BrightSign.Localization.csproj.AssemblyReference.cache

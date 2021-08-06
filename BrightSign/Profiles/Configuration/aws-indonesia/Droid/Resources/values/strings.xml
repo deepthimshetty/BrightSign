@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="VersionName">1.0</string>
+	<string name="ApplicationName">Mobilogix-ID</string>
+	<string name="hello">Mobilogix</string>
+	<string name="app_name">Mobilogix-ID</string> 
+	<string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+</resources>

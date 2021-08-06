@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvvm="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/section_height">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_left"
+        mvvm:MvxBind="Text Title"
+        android:layout_centerVertical="true" />
+    <MvxRadioGroup
+        android:id="@+id/rbGroup"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_right"
+        mvvm:MvxItemTemplate="@layout/item_radio"
+        mvvm:MvxBind="ItemsSource Items; SelectedItem SelectedItem" />
+</RelativeLayout>

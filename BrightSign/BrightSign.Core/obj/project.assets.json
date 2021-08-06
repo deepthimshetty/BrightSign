@@ -5966,19 +5966,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/ndevalapally/.nuget/packages/": {}
+    "/Users/imuser/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
+      "projectUniqueName": "/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
       "projectName": "BrightSign.Core",
-      "projectPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
-      "packagesPath": "/Users/ndevalapally/.nuget/packages/",
-      "outputPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/",
+      "projectPath": "/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/BrightSign.Core.csproj",
+      "packagesPath": "/Users/imuser/.nuget/packages/",
+      "outputPath": "/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ndevalapally/.config/NuGet/NuGet.Config"
+        "/Users/imuser/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -5990,8 +5990,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj": {
-              "projectPath": "/Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj"
+            "/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj": {
+              "projectPath": "/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Localization/BrightSign.Localization.csproj"
             }
           }
         }
@@ -6094,7 +6094,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
       }
     }
   },

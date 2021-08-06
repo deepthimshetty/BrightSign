@@ -10,3 +10,15 @@
 /Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csproj.CopyComplete
 /Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.dll
 /Users/ndevalapally/Documents/Projects/bright-sign/repo/brightsign-app-v2/BrightSign-Xamarin/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.pdb
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Core.deps.json
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Core.dll
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Core.pdb
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Localization.dll
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/bin/Debug/netstandard2.1/BrightSign.Localization.pdb
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csprojAssemblyReference.cache
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.AssemblyInfoInputs.cache
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.AssemblyInfo.cs
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csproj.CoreCompileInputs.cache
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.csproj.CopyComplete
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.dll
+/Users/imuser/Projects/BrightSign/BrightSign/BrightSign.Core/obj/Debug/netstandard2.1/BrightSign.Core.pdb

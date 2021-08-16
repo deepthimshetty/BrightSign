@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using MvvmCross.Platform;
-using MvvmCross.Platform.Converters;
-using MvvmCross.Plugins.File;
+using MvvmCross;
+//using MvvmCross.Platform;
+using MvvmCross.Converters;
+using MvvmCross.Plugin.File;
 
 namespace BrightSign.Core.Utility.Converters
 {

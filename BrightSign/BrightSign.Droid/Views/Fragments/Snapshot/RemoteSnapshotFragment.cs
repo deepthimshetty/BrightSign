@@ -12,9 +12,9 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using BrightSign.Core.ViewModels;
-using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Droid.Support.V4;
-using MvvmCross.Droid.Views.Attributes;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 namespace BrightSign.Droid.Views.Fragments.Snapshot
 {

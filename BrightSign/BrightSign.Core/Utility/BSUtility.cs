@@ -12,18 +12,17 @@ using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Core.Utility.Web;
 using BrightSign.Core.ViewModels;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.Plugin.Messenger;
 using Sockets.Plugin;
 using Zeroconf;
 using System.Net.Http;
 using System.IO;
 using System.Threading.Tasks;
 using PCLStorage;
-using MvvmCross.Platform;
 using System.Net;
 using System.Net.Sockets;
 using NtlmHttpHandler;
+using MvvmCross;
 
 namespace BrightSign.Core.Utility
 {
@@ -608,12 +607,12 @@ namespace BrightSign.Core.Utility
 
                             if (data == "refresh")
                             {
-                                if (Mvx.Resolve<IUserPreferences>().GetBool(Constants.USER_PREFS_AUTO_REFRESH))
+                                if (MvvmCross.Mvx.Resolve<IUserPreferences>().GetBool(Constants.USER_PREFS_AUTO_REFRESH))
                                 {
-                                    Mvx.Resolve<IMvxMessenger>().Publish(new ActiveDeviceMessage(this, DeviceStatus.Connected, true));
+                                    MvvmCross.Mvx.Resolve<IMvxMessenger>().Publish(new ActiveDeviceMessage(this, DeviceStatus.Connected, true));
 
                                 }
-                                Mvx.Resolve<IMvxMessenger>().Publish(new ImageRefreshMessage(this));
+                                MvvmCross.Mvx.Resolve<IMvxMessenger>().Publish(new ImageRefreshMessage(this));
                             }
                             else
                             {
@@ -1134,7 +1133,7 @@ namespace BrightSign.Core.Utility
 
         public async Task<string> DownloadFile(string url)
         {
-            var filename = Mvx.Resolve<IFileManager>().GetFilePath();
+            var filename = MvvmCross.Mvx.Resolve<IFileManager>().GetFilePath();
             string extension = url.ToLower().Contains("log") ? "log" : "dump";
             filename = filename + extension;
             var byteData = await HttpBase.Instance.DownloadLog(url);

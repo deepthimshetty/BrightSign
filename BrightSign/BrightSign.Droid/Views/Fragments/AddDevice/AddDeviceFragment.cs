@@ -15,11 +15,12 @@ using BrightSign.Core.ViewModels;
 using BrightSign.Core.ViewModels.AddDevice;
 using BrightSign.Core.ViewModels.SearchUnits;
 using BrightSign.Droid.Views.Fragments.SearchUnits;
-using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Platforms.Android.Binding.BindingContext;
+using MvvmCross.ViewModels;
 using MvvmCross.Droid.Support.V4;
-using MvvmCross.Droid.Views.Attributes;
+//using MvvmCross.Droid.Views.Attributes;
 using Android.Views.InputMethods;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 namespace BrightSign.Droid.Views.Fragments.AddDevice
 {

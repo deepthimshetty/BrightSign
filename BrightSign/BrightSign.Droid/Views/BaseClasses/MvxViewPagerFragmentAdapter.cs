@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Content;
 using Android.Support.V4.App;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.ViewModels;
 using MvvmCross.Droid.Support.V4;
 
 namespace BrightSign.Droid.Views.BaseClasses

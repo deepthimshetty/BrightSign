@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BrightSign.Core.Models;
 using BrightSign.Core.Utility.Interface;
-using MvvmCross.Platform;
+using MvvmCross;
 using SQLite;
 
 namespace BrightSign.Core.Utility.Database

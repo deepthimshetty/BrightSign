@@ -1,7 +1,8 @@
 ﻿using System;
 using BrightSign.Core.Utility;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
+using MvvmCross.ViewModels;
+//using MvvmCross.Platform;
+using System.Reflection;
 
 namespace BrightSign.Core.Models
 {

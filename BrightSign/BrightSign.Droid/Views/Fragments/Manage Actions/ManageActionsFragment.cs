@@ -12,16 +12,15 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using BrightSign.Core.ViewModels;
-using MvvmCross.Platforms.Android.Binding.BindingContext;//Binding.Droid.BindingContext;
-using MvvmCross.Platforms.Android.Views;//Binding.Droid.Views;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Support.V4;
+using MvvmCross.Droid.Views.Attributes;
 using Android.Support.Design.Widget;
 using BrightSign.Droid.Utility.Interface;
 using Android.Support.V7.Widget;
 using Android.Support.V7.Widget.Helper;
 using static Android.Views.View;
-using MvvmCross.Platforms.Android.Presenters.Attributes;
-using MvvmCross.Platforms.Android.Binding.Views;
 
 namespace BrightSign.Droid.Views.Fragments.ManageActions
 {

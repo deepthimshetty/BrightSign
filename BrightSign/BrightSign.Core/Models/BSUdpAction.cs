@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
-using MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 using SQLite;
 
 namespace BrightSign.Core.Models

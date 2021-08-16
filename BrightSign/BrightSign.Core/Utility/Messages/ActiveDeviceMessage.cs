@@ -1,5 +1,5 @@
 ﻿using System;
-using MvvmCross.Plugin.Messenger;
+using MvvmCross.Plugins.Messenger;
 
 namespace BrightSign.Core.Utility.Messages
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 using SQLite;
 
 namespace BrightSign.Core.Models

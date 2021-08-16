@@ -1,5 +1,5 @@
 ﻿using System;
-using MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace BrightSign.Core.Models
 {

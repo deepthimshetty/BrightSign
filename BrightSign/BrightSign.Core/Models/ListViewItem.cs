@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 using static BrightSign.Core.Utility.BSUtility;
 
 namespace BrightSign.Core.Models

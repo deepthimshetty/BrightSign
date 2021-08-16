@@ -5,9 +5,8 @@ using Android.Views;
 using Android.Widget;
 using BrightSign.Core.Utility;
 using BrightSign.Core.ViewModels;
-//using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Droid.Support.V4;
-using MvvmCross.Platforms.Android.Binding.BindingContext;
 
 namespace BrightSign.Droid.Views.Fragments
 {

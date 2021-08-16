@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using BrightSign.Core.Utility;
-using MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace BrightSign.Core.Models
 {

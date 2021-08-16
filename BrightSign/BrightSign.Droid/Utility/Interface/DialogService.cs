@@ -3,8 +3,10 @@ using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Android.App;
 using BrightSign.Core.Utility.Interface;
-using MvvmCross.Platform;
-using MvvmCross.Platform.Droid.Platform;
+using MvvmCross;
+//using MvvmCross.Platform;
+//using MvvmCross.Platform.Droid.Platform;
+using MvvmCross.Platforms.Android;
 
 namespace BrightSign.Droid.Utility.Interface
 {

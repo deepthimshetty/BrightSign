@@ -6,9 +6,11 @@ using BrightSign.Core.Utility;
 using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.Utility.Web;
 using BrightSign.Localization;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
@@ -30,10 +32,11 @@ namespace BrightSign.Core.ViewModels
         }
 
 
-        public RemoteSnapshotViewModel(IDialogService _dialogservice, IMvxMessenger messenger) : base(messenger)
+        public RemoteSnapshotViewModel(IDialogService _dialogservice, IMvxMessenger messenger, IMvxNavigationService navigationService) : base(messenger)
         {
             ViewTitle = "Remote Snapshots";
             dialogservice = _dialogservice;
+            _navigationService = navigationService;
             snapshotconfig = new SnapshotConfigModel();
 
             Task.Run(async () =>
@@ -66,7 +69,8 @@ namespace BrightSign.Core.ViewModels
         }
         private void ExecuteCancelCommand()
         {
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
         }
 
         private async Task ExecuteSaveCommand()
@@ -81,7 +85,8 @@ namespace BrightSign.Core.ViewModels
                 var IsSuccess = await HttpBase.Instance.SaveSnapshotsConfiguration(snapshotconfig);
                 if (IsSuccess)
                 {
-                    Close(this);
+                    //Close(this);
+                    await _navigationService.Close(this);
                     IsBusy = false;
                     Mvx.Resolve<ICustomAlert>().ShowCustomAlert(true, Strings.configuration, Strings.savedsuccessfully);
 

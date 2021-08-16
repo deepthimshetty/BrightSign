@@ -7,8 +7,11 @@ using BrightSign.Core.Utility;
 using BrightSign.Core.Utility.Database;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Core.ViewModels.AddDevice;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
+using MvvmCross;
 
 namespace BrightSign.Core.ViewModels.Settings
 {
@@ -22,6 +25,7 @@ namespace BrightSign.Core.ViewModels.Settings
 
             ViewTitle = "Manage Active BrightSigns";
             BSUnitsItemSource = new ObservableCollection<BSDevice>(Constants.FullDevices);
+            _navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
             //BSUnitsItemSource = new ObservableCollection<BSDevice>();
             //GetDevices();
         }
@@ -84,12 +88,14 @@ namespace BrightSign.Core.ViewModels.Settings
 
         private void ExecuteCancelCommand()
         {
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
         }
 
         private void ExecuteSaveCommand()
         {
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
             if (bsdeviceAdd != null && !string.IsNullOrEmpty(bsdeviceAdd.Name))
             {
                 Constants.FullDevices.Add(bsdeviceAdd);
@@ -151,9 +157,10 @@ namespace BrightSign.Core.ViewModels.Settings
             get { return new MvxCommand(() => ExecuteAddUnitCommand()); }
         }
 
-        private void ExecuteAddUnitCommand()
+        private async void ExecuteAddUnitCommand()
         {
-            ShowViewModel<AddDeviceViewModel>();
+            //ShowViewModel<AddDeviceViewModel>();
+            await _navigationService.Navigate<AddDeviceViewModel>();
             if (AddDeviceToken == null)
             {
                 AddDeviceToken = Messenger.Subscribe<AddDeviceRefreshMessage>(OnAddDeviceResponse);

@@ -8,10 +8,11 @@ using BrightSign.Core.Utility.Database;
 using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Localization;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
-
+using MvvmCross.ViewModels;
+using MvvmCross;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
@@ -22,13 +23,13 @@ namespace BrightSign.Core.ViewModels
         bool IsUserDefinedActionAdded = false;
         IDialogService dialogservice;
 
-        public ManageActionsViewModel(IMvxMessenger messenger, IDialogService _dialogservice) : base(messenger)
+        public ManageActionsViewModel(IMvxMessenger messenger, IDialogService _dialogservice, IMvxNavigationService navigationService) : base(messenger)
         {
             DefaultActionsList = new ObservableCollection<BSUdpAction>();
             UserDefinedActionsList = new ObservableCollection<BSUdpAction>();
             ViewTitle = "Manage Actions";
             dialogservice = _dialogservice;
-
+            _navigationService = navigationService;
             //DefaultActionsList = new ObservableCollection<BSUdpAction>(Constants.BSActionList);
             //UserDefinedActionsList = new ObservableCollection<BSUdpAction>(DBHandler.Instance.GetActionsfromDB());
 
@@ -247,7 +248,8 @@ namespace BrightSign.Core.ViewModels
 
         private void ExecuteCancelCommand()
         {
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
             //if (IsUserDefinedActionAdded)
             //{
             Messenger.Publish(new LoadButtonsMessage(this, DeviceStatus.Connected, true));

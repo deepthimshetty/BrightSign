@@ -6,11 +6,13 @@ using BrightSign.Core.Utility;
 using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.ViewModels.SearchUnits;
 using BrightSign.Localization;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Commands;
+using MvvmCross.ViewModels;
 using MvvmCross.Localization;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross;
+using MvvmCross.Plugin.Messenger;
 using Plugin.Connectivity;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
@@ -18,18 +20,20 @@ namespace BrightSign.Core.ViewModels
     {
         protected IMvxMessenger Messenger;
         protected IDialogService DialogService;
-
+        protected IMvxNavigationService _navigationService;
         public BaseViewModel()
         {
             CurrentDevice = Constants.ActiveDevice;
         }
+        
 
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Mobilogix.Core.Code.ViewModels.BaseViewModel"/> class.
         /// </summary>
         /// <param name="messenger">Messenger.</param>
         /// <param name="_dialogService">Dialog service.</param>
-        public BaseViewModel(IMvxMessenger messenger, IDialogService _dialogService = null)
+        public BaseViewModel(IMvxMessenger messenger, IDialogService _dialogService = null, IMvxNavigationService navigationService = null)
         {
             Messenger = messenger;
             if (_dialogService != null)
@@ -37,7 +41,10 @@ namespace BrightSign.Core.ViewModels
                 DialogService = _dialogService;
             }
             CurrentDevice = Constants.ActiveDevice;
-
+            if(_navigationService != null)
+            {
+                _navigationService = navigationService;
+            }
         }
 
         /// <summary>
@@ -170,10 +177,11 @@ namespace BrightSign.Core.ViewModels
             }
         }
 
-        private void ChangeDeviceClick(int obj)
+        private async void ChangeDeviceClick(int obj)
         {
             BSUtility.Instance.DisconnectSocket();
-            ShowViewModel<SearchUnitsViewModel>();
+            //ShowViewModel<SearchUnitsViewModel>();
+            await _navigationService.Navigate<SearchUnitsViewModel>();
         }
 
         private BSDevice _CurrentDevice;

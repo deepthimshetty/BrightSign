@@ -5,15 +5,20 @@ using BrightSign.Core.Models;
 using BrightSign.Core.Utility;
 using BrightSign.Core.Utility.Database;
 using BrightSign.Core.ViewModels.AddDevice;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
     public class OfflineViewModel : BaseViewModel
     {
-        public OfflineViewModel(IMvxMessenger messenger) : base(messenger)
+        private readonly IMvxNavigationService _navigationService;
+
+        public OfflineViewModel(IMvxMessenger messenger, IMvxNavigationService navigationService) : base(messenger)
         {
+            _navigationService = navigationService;
         }
         private ObservableCollection<BSDevice> _offlineItemSource;
         public ObservableCollection<BSDevice> OfflineItemSource
@@ -46,10 +51,12 @@ namespace BrightSign.Core.ViewModels
             }
         }
 
-        private void AddDeviceClick()
+        private async void AddDeviceClick()
         {
-            ShowViewModel<AddDeviceViewModel>();
+            //ShowViewModel<AddDeviceViewModel>();
+           await _navigationService.Navigate<AddDeviceViewModel>();
         }
+       
 
         public ICommand RemoveCommand
         {

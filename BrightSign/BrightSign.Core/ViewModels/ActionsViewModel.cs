@@ -13,8 +13,10 @@ using BrightSign.Core.Utility.Database;
 using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Core.ViewModels.Settings;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
@@ -23,7 +25,9 @@ namespace BrightSign.Core.ViewModels
         MvxSubscriptionToken ButtonsToken;
         IUserPreferences UserPreferences;
 
+        //private readonly IMvxNavigationService _navigationServic;
 
+        
         public int SelectedButtonType
         {
             get
@@ -38,7 +42,7 @@ namespace BrightSign.Core.ViewModels
             {
                 return new MvxCommand(() =>
                 {
-                    SettingsClick();
+                    _ = SettingsClickAsync();
                 });
             }
         }
@@ -55,12 +59,13 @@ namespace BrightSign.Core.ViewModels
             }
         }
 
-        private void SettingsClick()
+        private async Task SettingsClickAsync()
         {
-            ShowViewModel<SettingsViewModel>();
+            //ShowViewModel<SettingsViewModel>();
+            await _navigationService.Navigate<SnapshotsViewModel>();
         }
 
-        public ActionsViewModel(IMvxMessenger messenger, IUserPreferences userPreferences) : base(messenger)
+        public ActionsViewModel(IMvxMessenger messenger, IUserPreferences userPreferences, IMvxNavigationService navigationService) : base(messenger)
         {
             UserPreferences = userPreferences;
 
@@ -70,7 +75,7 @@ namespace BrightSign.Core.ViewModels
 
             DefaultActionsList = Constants.BSActionList;
             UserDefinedActionsList = Constants.UserDefinedActionsList;
-
+            _navigationService = navigationService;
 
             ViewTitle = "Actions";
 
@@ -266,9 +271,10 @@ namespace BrightSign.Core.ViewModels
             }
         }
 
-        private void SnapshotClick()
+        private async void SnapshotClick()
         {
-            ShowViewModel<SnapshotsViewModel>();
+            //ShowViewModel<SnapshotsViewModel>();
+            await _navigationService.Navigate<SnapshotsViewModel>();
         }
 
 
@@ -321,9 +327,11 @@ namespace BrightSign.Core.ViewModels
         {
             get
             {
-                return new MvxCommand(() =>
+                return new MvxCommand(async () =>
                {
-                   ShowViewModel<ManageActionsViewModel>(new { TabIndex = SelectedTabIndex });
+                   //TODO: Solve the navigation with parameters. Add the navigation here
+                   //ShowViewModel<ManageActionsViewModel>(new { TabIndex = SelectedTabIndex });
+                   //object p = await _navigationService.Navigate<ManageActionsViewModel>( new { TabIndex = SelectedTabIndex});
                    if (ButtonsToken == null)
                    {
                        ButtonsToken = Messenger.Subscribe<LoadButtonsMessage>(OnLoadButtonsResponse);

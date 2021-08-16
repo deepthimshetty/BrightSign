@@ -2,8 +2,10 @@
 using System.Collections.ObjectModel;
 using BrightSign.Core.Models;
 using BrightSign.Core.Utility;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
@@ -55,12 +57,13 @@ namespace BrightSign.Core.ViewModels
 
         private void ExecuteCancelCommand()
         {
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
         }
 
-        public ShareViewModel(IMvxMessenger messenger) : base(messenger)
+        public ShareViewModel(IMvxMessenger messenger, IMvxNavigationService navigationService) : base(messenger)
         {
-
+            _navigationService = navigationService;
         }
 
         public void Init(int index)

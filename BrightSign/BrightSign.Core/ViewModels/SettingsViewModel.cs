@@ -3,10 +3,10 @@ using System.Collections.ObjectModel;
 using BrightSign.Core.Models;
 using BrightSign.Core.Utility;
 using BrightSign.Core.Utility.Messages;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
+using MvvmCross.ViewModels;
+using MvvmCross;
 using System.Linq;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.Plugin.Messenger;
 using static BrightSign.Core.Utility.BSUtility;
 using System.Collections.Generic;
 using BrightSign.Core.Utility.Interface;
@@ -14,6 +14,8 @@ using System.Diagnostics;
 using BrightSign.Core.Utility.Database;
 using BrightSign.Core.ViewModels.SearchUnits;
 using BrightSign.Localization;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
@@ -105,13 +107,13 @@ namespace BrightSign.Core.ViewModels
 
 		BSDevice NewDevice;
 
-		public SettingsViewModel(IMvxMessenger messenger, IUserPreferences userPreferences) : base(messenger)
+		public SettingsViewModel(IMvxMessenger messenger, IUserPreferences userPreferences, IMvxNavigationService navigationService) : base(messenger)
 		{
 			if (SettingsToken == null)
 			{
 				SettingsToken = Messenger.Subscribe<SettingsMessage>(OnSettingsResponse);
 			}
-
+			_navigationService = navigationService;
 			UserPreferences = userPreferences;
 			if (CurrentDevice != null)
 			{
@@ -430,17 +432,19 @@ namespace BrightSign.Core.ViewModels
 			get { return new MvxCommand(GoToRemoteSnapshotVM); }
 		}
 
-		public void GoToRemoteSnapshotVM()
+		public async void GoToRemoteSnapshotVM()
 		{
 			if (Constants.IsSnapShotsConfigurable)
 			{
-				ShowViewModel<RemoteSnapshotViewModel>();
+				//ShowViewModel<RemoteSnapshotViewModel>();
+				await _navigationService.Navigate<RemoteSnapshotViewModel>();
 			}
 		}
 
-		public void GoToSelectUnitsVM()
+		public async void GoToSelectUnitsVM()
 		{
-			ShowViewModel<BSUnitsViewModel>();
+			//ShowViewModel<BSUnitsViewModel>();
+			await _navigationService.Navigate<BSUnitsViewModel>();
 
 			if (SettingsRefreshToken == null)
 			{

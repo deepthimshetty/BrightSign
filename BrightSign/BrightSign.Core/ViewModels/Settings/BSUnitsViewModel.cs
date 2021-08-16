@@ -5,18 +5,20 @@ using BrightSign.Core.Models;
 using BrightSign.Core.Utility;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Core.ViewModels.Settings;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
     public class BSUnitsViewModel : BaseViewModel
     {
         MvxSubscriptionToken ManageDeviceToken;
-        public BSUnitsViewModel(IMvxMessenger messenger) : base(messenger)
+        public BSUnitsViewModel(IMvxMessenger messenger, IMvxNavigationService navigationService) : base(messenger)
         {
             ViewTitle = "Select BrightSign";
-
+            _navigationService = navigationService;
             BSUnitsItemSource = new ObservableCollection<BSDevice>(Constants.FullDevices);
 
             //BSUnitsItemSource = new ObservableCollection<BSDevice>();
@@ -88,9 +90,10 @@ namespace BrightSign.Core.ViewModels
             get { return new MvxCommand(() => ExecuteSaveCommand()); }
         }
 
-        private void ExecuteManageBSUnitsCommand()
+        private async void ExecuteManageBSUnitsCommand()
         {
-            ShowViewModel<ManageBSUnitsViewModel>();
+            //ShowViewModel<ManageBSUnitsViewModel>();
+            await _navigationService.Navigate<ManageBSUnitsViewModel>();
             if (ManageDeviceToken == null)
             {
                 ManageDeviceToken = Messenger.Subscribe<ManageDeviceRefreshMessage>(OnManageDeviceResponse);
@@ -111,13 +114,15 @@ namespace BrightSign.Core.ViewModels
 
         private void ExecuteCancelCommand()
         {
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
         }
 
         private void ExecuteSaveCommand()
         {
             var defaultUnit = BSUnitsItemSource.Where(x => x.IsDefault).FirstOrDefault();
-            Close(this);
+            //Close(this);
+            _navigationService.Close(this);
             Messenger.Publish(new SettingsRefreshMessage(this, defaultUnit, true));
         }
 

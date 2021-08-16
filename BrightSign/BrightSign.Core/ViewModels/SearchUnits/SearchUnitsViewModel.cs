@@ -5,17 +5,22 @@ using System.Threading.Tasks;
 using BrightSign.Core.Models;
 using BrightSign.Core.Utility;
 using BrightSign.Core.ViewModels.Units;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross.Plugin.Messenger;
 using Zeroconf;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels.SearchUnits
 {
     public class SearchUnitsViewModel : BaseViewModel
     {
 
+        //private readonly IMvxNavigationService _navigationService;
 
-
+        public SearchUnitsViewModel(IMvxNavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
         bool _AcquireLock = false;
         public bool AcquireLock
         {
@@ -54,7 +59,8 @@ namespace BrightSign.Core.ViewModels.SearchUnits
 
                 AcquireLock = false;
 
-                ShowViewModel<UnitsViewModel>();
+                //ShowViewModel<UnitsViewModel>();
+                await NavigateToViewmodelMethod();
 
                 //ShowViewModel<SnapshotsViewModel>();
 
@@ -74,6 +80,10 @@ namespace BrightSign.Core.ViewModels.SearchUnits
 
         }
 
+        public async Task NavigateToViewmodelMethod()
+        {
+            await _navigationService.Navigate<UnitsViewModel>();
+        }
 
 
     }

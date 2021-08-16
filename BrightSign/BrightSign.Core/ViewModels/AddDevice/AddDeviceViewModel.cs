@@ -10,16 +10,18 @@ using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Core.Utility.Web;
 using BrightSign.Localization;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels.AddDevice
 {
     public class AddDeviceViewModel : BaseViewModel
     {
         IDialogService dialogservice;
-
+        //private readonly IMvxNavigationService _navigationService;
 
         BSDeviceTemp _bsdeviceAdd;
         public BSDeviceTemp bsdeviceAdd
@@ -35,7 +37,7 @@ namespace BrightSign.Core.ViewModels.AddDevice
             }
         }
 
-        public AddDeviceViewModel(IDialogService _dialogservice, IMvxMessenger messenger) : base(messenger)
+        public AddDeviceViewModel(IDialogService _dialogservice, IMvxMessenger messenger, IMvxNavigationService navigationService) : base(messenger)
         {
             ViewTitle = "Search Units";
             dialogservice = _dialogservice;
@@ -47,6 +49,7 @@ namespace BrightSign.Core.ViewModels.AddDevice
 //            IPAddress = "192.168.0.108";
 //#endif 
             bsdeviceAdd = new BSDeviceTemp();
+            _navigationService = navigationService;
         }
 
 
@@ -113,7 +116,8 @@ namespace BrightSign.Core.ViewModels.AddDevice
             {
                 return new MvxCommand(() =>
                 {
-                    Close(this);
+                    _navigationService.Close(this);
+                    //Close(this);
                 });
             }
         }
@@ -197,7 +201,8 @@ namespace BrightSign.Core.ViewModels.AddDevice
             }
             else
             {
-                Close(this);
+                //Close(this);
+                _navigationService.Close(this);
                 BSDevice bsDevice = bsdeviceAdd.GetBSdeviceObj();
                 Messenger.Publish(new AddDeviceRefreshMessage(this, bsDevice));
                 Mvx.Resolve<ICustomAlert>().ShowCustomAlert(true, bsDevice.Name, Strings.addedtolist);

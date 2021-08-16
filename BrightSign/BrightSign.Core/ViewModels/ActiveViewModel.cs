@@ -10,18 +10,21 @@ using BrightSign.Core.Utility.Interface;
 using BrightSign.Core.Utility.Messages;
 using BrightSign.Core.ViewModels.AddDevice;
 using BrightSign.Localization;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.ViewModels;
+using MvvmCross;
+using MvvmCross.Plugin.Messenger;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace BrightSign.Core.ViewModels
 {
     public class ActiveViewModel : BaseViewModel
     {
         MvxSubscriptionToken AddDeviceToken;
-        public ActiveViewModel(IMvxMessenger messenger) : base(messenger)
+        private readonly IMvxNavigationService _navigationServic;
+        public ActiveViewModel(IMvxMessenger messenger, IMvxNavigationService navigationService) : base(messenger)
         {
-
+            _navigationServic = navigationService;
             ActiveItemSource = new ObservableCollection<BSDevice>();
         }
 
@@ -53,12 +56,19 @@ namespace BrightSign.Core.ViewModels
         {
             //Mvx.Resolve<ICustomAlert>().ShowCustomAlert(true, "BX", "bx");
 
-            ShowViewModel<AddDeviceViewModel>();
+            //ShowViewModel<AddDeviceViewModel>();
+            _ = NavigateToViewmodelMethod();
             if (AddDeviceToken == null)
             {
                 AddDeviceToken = Messenger.Subscribe<AddDeviceRefreshMessage>(OnAddDeviceResponse);
             }
         }
+
+        public async Task NavigateToViewmodelMethod()
+        {
+            await _navigationServic.Navigate<AddDeviceViewModel>();
+        }
+
         private void OnAddDeviceResponse(AddDeviceRefreshMessage obj)
         {
             if (obj.device != null)
@@ -113,7 +123,8 @@ namespace BrightSign.Core.ViewModels
                         Constants.LoginUser = string.Empty;
                         Constants.LoginPwd = string.Empty;
 
-                        ShowViewModel<MainViewModel>();
+                        //ShowViewModel<MainViewModel>();
+                        await _navigationServic.Navigate<MainViewModel>();
                         break;
                     case Status.Failure:
                         IsBusy = false;
